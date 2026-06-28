@@ -13,13 +13,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.modernpressurewash.co.za/" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="Website Logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="Website Logo.png" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
 
-  <!-- AOS Animation Library -->
+  <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
@@ -52,14 +60,16 @@
 </head>
 <body>
 
-  <!-- ===== OVERLAY (MUST COME BEFORE HEADER) ===== -->
+  <!-- ===== OVERLAY ===== -->
   <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ===== HEADER ===== -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <div class="logo">Modern <span>Pressure Wash</span></div>
-
+      <a href="/" class="logo-link">
+        <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" />
+        <span class="logo-text">Modern <span>Pressure Wash</span></span>
+      </a>
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <button class="nav-close" id="nav-close" aria-label="Close menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -73,7 +83,6 @@
         <a href="#reviews">Reviews</a>
         <a href="#quote" class="btn btn-primary nav-cta">Get Free Quote</a>
       </nav>
-
       <div class="header-cta">
         <a href="#quote" class="btn btn-primary desktop-only">Get Free Quote</a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
@@ -93,18 +102,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-wrap">
         <div class="hero-grid">
-          <!-- Left column: text -->
           <div class="hero-copy" data-aos="fade-right" data-aos-duration="800">
             <span class="eyebrow">THE REEDS, CENTURION</span>
-            <h1 id="hero-title">See Your Property <br>Like New — Before <br>You Even Book</h1>
-            <p class="sub">Centurion's pressure washing specialists. Drag the handle to see real results, then get a price for your own property in under a minute.</p>
+            <h1 id="hero-title">High-Performance Surface Restoration & Asset Preservation</h1>
+            <p class="sub">We restore and protect residential estates, commercial facilities, and high-value infrastructure across Gauteng. Utilizing specialized pressure washing and soft-washing systems, we eliminate deep-seated grime, moss, and atmospheric pollution without risking structural damage.</p>
             <div class="price-chip">Driveways from <span class="mono">R300</span> — up to 40m²</div>
             <div class="founder-chip"><span class="dot" aria-hidden="true"></span> Quoted personally by Israel, owner</div>
             <div class="cta-row">
-              <a href="#quote" class="btn btn-primary">Get My Price</a>
-              <a href="https://wa.me/27636455372" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <a href="https://wa.link/3y4c6d" class="btn btn-primary">Request A Quote</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.3 14.9 3.8 13.5 3.8 12c0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/></svg>
-                WhatsApp Us
+                View Our Plans
               </a>
             </div>
             <div class="rating-chip">
@@ -113,15 +121,13 @@
             </div>
           </div>
 
-          <!-- Right column: before/after slider with real images -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after slider" aria-valuenow="50" aria-valuemin="4" aria-valuemax="96" tabindex="0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-            <!-- AFTER (clean) – bottom layer -->
+          <!-- HERO SLIDER -->
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
             <div class="reveal-layer reveal-after">
-              <img src="driveway-after-DmeAg-eG.jpg" alt="Clean driveway after pressure washing" class="slider-image" />
+              <img src="Job E/E.webp" alt="Clean driveway" class="slider-image" loading="lazy" />
             </div>
-            <!-- BEFORE (dirty) – top layer, clipped -->
             <div class="reveal-layer reveal-before">
-              <img src="driveway-before-DzWqoLO3.jpg" alt="Dirty driveway before pressure washing" class="slider-image" />
+              <img src="Job E/E1.webp" alt="Dirty driveway" class="slider-image" loading="lazy" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">BEFORE</span>
             <span class="reveal-label after-label" aria-hidden="true">AFTER</span>
@@ -153,55 +159,120 @@
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
           <span class="eyebrow">What We Do</span>
-          <h2 id="services-title">Pick What Needs Cleaning</h2>
-          <p>Real price ranges based on typical Centurion property sizes.</p>
+          <h2 id="services-title">Specialized Surface Restoration</h2>
+          <p>We engineer specific pressure and chemical ratios tailored to your property's masonry, roofing, and structural layout.</p>
         </div>
+
         <div class="services-grid">
+          <!-- 1. Driveway Restoration -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></div>
-            <h3>Roof Cleaning</h3>
-            <p>Moss, algae & stains removed safely with soft-wash.</p>
+            <div class="icon-badge"><i class="bi bi-road"></i></div>
+            <h3>Driveway Restoration</h3>
+            <p>Vehicular traffic quickly tracks oil, tire marks, and deep-seated grime into porous paving and concrete. Utilizing precision pressure systems, we extract embedded pollutants and tough stains – safely restoring immaculate curb appeal while preventing the long-term degradation of your stone surfaces.</p>
             <div class="price-range"><span class="mono">R450–R1,200</span></div>
             <a href="#" class="detail-link" role="button">See details →</a>
           </div>
+
+          <!-- 2. Paving Restoration -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6l3 3"/><circle cx="12" cy="14" r="8"/></svg></div>
-            <h3>Driveway Cleaning</h3>
-            <p>Restore your driveway to like-new condition.</p>
+            <div class="icon-badge"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+            <h3>Paving Restoration</h3>
+            <p>South Africa's intense summer heat and heavy downpours create the perfect breeding ground for deep-seated grime, stubborn moss, and unsightly black algae on porous paving that a standard hose pipe can't touch. Our specialized deep-clean systems penetrate deep into the paver's surface, extracting embedded pollutants and eliminating slick moss at the root – instantly restoring your driveway or entertainment patio to its original, pristine look.</p>
             <div class="price-range"><span class="mono">R300–R650</span></div>
             <a href="#" class="detail-link" role="button">See details →</a>
           </div>
+
+          <!-- 3. Low-Pressure Roof Washing -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M6 6v12a2 2 0 002 2h8a2 2 0 002-2V6"/></svg></div>
-            <h3>Gutter Cleaning</h3>
-            <p>Prevent water damage with thorough gutter cleaning.</p>
+            <div class="icon-badge"><i class="bi bi-house-roof"></i></div>
+            <h3>Low-Pressure Roof Washing</h3>
+            <p>High pressure can permanently destroy roof tiles and exterior plaster coatings. We utilize specialized soft-wash chemical systems to safely kill algae, mould, and moss at the root, preserving your structural integrity and extending your paintwork's lifespan.</p>
             <div class="price-range"><span class="mono">R350–R700</span></div>
             <a href="#" class="detail-link" role="button">See details →</a>
           </div>
+
+          <!-- 4. Commercial & HOA Facility Maintenance -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <h3>Patio & Pavement</h3>
-            <p>Bring back the original colour and grip.</p>
+            <div class="icon-badge"><i class="bi bi-building"></i></div>
+            <h3>Commercial & HOA Facility Maintenance</h3>
+            <p>High-traffic commercial properties demand consistent safety and cleanliness compliance. We provide scheduled, recurring maintenance programs for retail strips, office parks, and residential estates – focusing on dumpster pads, drive-thrus, parking structures, and boundary walls.</p>
             <div class="price-range"><span class="mono">R300–R550</span></div>
             <a href="#" class="detail-link" role="button">See details →</a>
           </div>
-          <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-            <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4M9 7h.01M15 7h.01M9 11h.01M15 11h.01"/></svg></div>
-            <h3>House Exterior</h3>
-            <p>Full exterior wash for walls, fascia, and frames.</p>
-            <div class="price-range"><span class="mono">R600–R1,500</span></div>
-            <a href="#" class="detail-link" role="button">See details →</a>
-          </div>
-          <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <div class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
-            <h3>Full Property</h3>
-            <p>Complete property transformation in one visit.</p>
-            <div class="price-range"><span class="mono">R1,200+</span></div>
-            <a href="#" class="detail-link" role="button">See details →</a>
-          </div>
         </div>
+
         <div class="services-cta" data-aos="fade-up" data-aos-duration="600">
           <a href="#quote" class="btn btn-outline">Not Sure? Get a Free Walkthrough Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MAINTENANCE PLANS ===== -->
+    <section id="plans" aria-labelledby="plans-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">Recurring Care</span>
+          <h2 id="plans-title">Maintenance Plans That Keep Your Property Spotless</h2>
+          <p>Choose a plan that fits your needs and budget. Regular cleaning at a discounted rate – cancel anytime.</p>
+        </div>
+        <div class="row g-4 mt-3 justify-content-center">
+          <!-- Silver -->
+          <div class="col-md-4">
+            <div class="plan-card silver">
+              <div class="plan-badge">Best Value</div>
+              <div class="plan-header">
+                <h3>Silver Care</h3>
+                <div class="plan-price">R199 <span>/ month</span></div>
+                <p class="plan-sub">Essential protection for high-traffic areas</p>
+              </div>
+              <ul class="plan-features">
+                <li><i class="bi bi-check-circle-fill"></i> Serviced Every 6 Months</li>
+                <li><i class="bi bi-check-circle-fill"></i> Moderate-traffic residential homes and properties looking to keep winter grime and seasonal moss at bay.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Full structural facade soft-wash, comprehensive driveway deep-clean, and main external gutter clearing.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Protects your paintwork and prevents long-term masonry staining before it sets in.</li>
+              </ul>
+              <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" target="_blank" class="btn btn-primary w-100">Choose Silver</a>
+            </div>
+          </div>
+          <!-- Gold -->
+          <div class="col-md-4">
+            <div class="plan-card gold featured">
+              <div class="plan-badge">Most Popular</div>
+              <div class="plan-header">
+                <h3>Gold Care</h3>
+                <div class="plan-price">R349 <span>/ month</span></div>
+                <p class="plan-sub">Full exterior coverage for your home</p>
+              </div>
+              <ul class="plan-features">
+                <li><i class="bi bi-check-circle-fill"></i> Serviced Every 3 Months</li>
+                <li><i class="bi bi-check-circle-fill"></i> High-value residential estates, busy commercial entrances, and properties with heavy tree cover or high foot traffic.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Everything in Silver Care, plus a full perimeter boundary wall wash, outdoor entertainment patios, and immediate high-traffic walkway stain removal.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Complete, proactive asset protection. Your property remains consistently pristine without ever reaching a visibly soiled state.</li>
+              </ul>
+              <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" target="_blank" class="btn btn-primary w-100">Choose Gold</a>
+            </div>
+          </div>
+          <!-- Platinum -->
+          <div class="col-md-4">
+            <div class="plan-card platinum">
+              <div class="plan-badge">Premium</div>
+              <div class="plan-header">
+                <h3>Platinum Care</h3>
+                <div class="plan-price">R499 <span>/ month</span></div>
+                <p class="plan-sub">Complete peace of mind – everything included</p>
+              </div>
+              <ul class="plan-features">
+                <li><i class="bi bi-check-circle-fill"></i> Serviced Every 2 Months</li>
+                <li><i class="bi bi-check-circle-fill"></i> Premium commercial facilities, drive-thrus, high-frequency retail strips, and restaurant dumpster zones.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Intensive surface degreasing, constant oil and chewing gum removal, public health sanitation compliance, and comprehensive structural washing.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Ultimate liability reduction. Completely eliminates slip-and-fall hazards caused by oily or algae-slick walkways and keeps corporate properties looking flawless to customers.</li>
+              </ul>
+              <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" target="_blank" class="btn btn-primary w-100">Choose Platinum</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="600">
+          <p class="text-muted small">All care plans are calculated based on your specific property layout and square meter volume. To ensure the highest standard of restoration, properties requiring heavy initial deep-cleans may be subject to an upfront baseline treatment fee before the monthly subscription cycle begins.</p>
         </div>
       </div>
     </section>
@@ -217,12 +288,12 @@
         <div class="gallery-grid">
 
           <!-- 1. Driveway -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway" aria-valuenow="50" aria-valuemin="4" aria-valuemax="96" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
             <div class="reveal-layer reveal-after">
-              <img src="driveway-after-DmeAg-eG.jpg" alt="Clean driveway" class="slider-image" />
-            </div>
+              <img src="Job B/B1.webp" alt="Clean driveway" class="slider-image" loading="lazy" />
+            </div>  
             <div class="reveal-layer reveal-before">
-              <img src="driveway-before-DzWqoLO3.jpg" alt="Dirty driveway" class="slider-image slider-before" />
+              <img src="Job B/B.webp" alt="Dirty driveway" class="slider-image" loading="lazy" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -238,12 +309,12 @@
           </div>
 
           <!-- 2. Roof -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after roof" aria-valuenow="50" aria-valuemin="4" aria-valuemax="96" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after roof" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
             <div class="reveal-layer reveal-after">
-              <img src="roof-after-D6YwclNH.jpg" alt="Clean roof" class="slider-image" />
+              <img src="Job D/D2.webp" alt="Clean roof" class="slider-image" loading="lazy" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="roof-before-4D1JuljP.jpg" alt="Dirty roof" class="slider-image slider-before" />
+              <img src="Job D/D.webp" alt="Dirty roof" class="slider-image" loading="lazy" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -259,12 +330,12 @@
           </div>
 
           <!-- 3. Patio -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after patio" aria-valuenow="50" aria-valuemin="4" aria-valuemax="96" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after patio" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
             <div class="reveal-layer reveal-after">
-              <img src="patio-after-Dd3AoL2T.jpg" alt="Clean patio" class="slider-image" />
+              <img src="Job G/G2.webp" alt="Clean patio" class="slider-image" loading="lazy" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="patio-before-Cy9ifKlG.jpg" alt="Dirty patio" class="slider-image slider-before" />
+              <img src="Job G/G.webp" alt="Dirty patio" class="slider-image" loading="lazy" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -280,12 +351,12 @@
           </div>
 
           <!-- 4. Gutter -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after gutter" aria-valuenow="50" aria-valuemin="4" aria-valuemax="96" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after gutter" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
             <div class="reveal-layer reveal-after">
-              <img src="gutter-after-C801Ktgl.jpg" alt="Clean gutter" class="slider-image" />
+              <img src="Job A/A.webp" alt="Clean gutter" class="slider-image" loading="lazy" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="gutter-before-JCKJ6Ldz.jpg" alt="Dirty gutter" class="slider-image slider-before" />
+              <img src="Job A/A1.webp" alt="Dirty gutter" class="slider-image" loading="lazy" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -301,9 +372,9 @@
           </div>
 
         </div>
-        <div class="gallery-cta" data-aos="fade-up" data-aos-duration="600">
+        <!-- <div class="gallery-cta" data-aos="fade-up" data-aos-duration="600">
           <a href="#" class="btn btn-outline" role="button">See the Full Gallery</a>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -312,36 +383,35 @@
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
           <span class="eyebrow">How It Works</span>
-          <h2 id="process-title">From Message to <br>Spotless, in Four Steps</h2>
+          <h2 id="process-title">Our Engineered 4-Step Execution Process</h2>
         </div>
-
         <div class="process-steps">
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
             <div class="step-circle">01</div>
             <div class="step-content">
-              <h3>Send your details</h3>
-              <p>Tell us your address and what needs cleaning — form, call, or WhatsApp.</p>
+              <h3>Digital Layout Assessment</h3>
+              <p>Send us your location or property photos. Our team analyses your total square meter volume and structural layouts to map out a highly accurate, custom project plan.</p>
             </div>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <div class="step-circle">02</div>
             <div class="step-content">
-              <h3>Get a firm price</h3>
-              <p>A real price within 1 hour. No site visit needed for most jobs.</p>
+              <h3>Custom Engineering Scope</h3>
+              <p>We compile a professional, itemized proposal detailing the exact cleaning methodologies, chemical safety requirements, and target timelines required for your project.</p>
             </div>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <div class="step-circle">03</div>
             <div class="step-content">
-              <h3>We clean</h3>
-              <p>On your scheduled day, usually within the same week.</p>
+              <h3>Precision Cleaning Operations</h3>
+              <p>Our skilled technical teams arrive on-site with advanced equipment, carefully managing water flow, environmental protection, and surface precision without disrupting your day.</p>
             </div>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <div class="step-circle">04</div>
             <div class="step-content">
-              <h3>You inspect first</h3>
-              <p>Not happy with a spot? We re-clean it free, on the spot.</p>
+              <h3>Quality Sign-Off</h3>
+              <p>We perform a meticulous walk-through of the restored surfaces alongside your team to ensure every single square meter meets our premium company standards.</p>
             </div>
           </div>
         </div>
@@ -353,7 +423,7 @@
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
           <span class="eyebrow">Why Choose Us</span>
-          <h2 id="why-title">What Actually Makes Us Different</h2>
+          <h2 id="why-title">Why Modern Pressure Wash Outperforms the Market</h2>
         </div>
         <div class="diff-grid">
           <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
@@ -373,7 +443,7 @@
           <div class="founder-photo" aria-hidden="true">IM</div>
           <div>
             <blockquote cite="https://www.modernpressurewash.co.za/about">
-              "I started Modern Pressure Wash because Centurion homes deserved better — real prices, real care, no shortcuts."
+              "Modern Pressure Wash was established to bridge the gap between informal exterior cleaning and true corporate facility asset management. We recognized that property owners were constantly frustrated by unreliable contractors who used aggressive, damaging water pressure and lacked structural knowledge. We approach pressure washing as an engineering task, not just a cleaning chore. By calculating the exact thermal, chemical, and pressure requirements for every unique material - from sensitive clay bricks to durable concrete panels - we maximize restoration results while guaranteeing the absolute safety of your property. We don't just clear dirt; we protect your long-term real estate investments."
             </blockquote>
             <div class="name">Israel Maphang</div>
             <div class="role">Owner, Modern Pressure Wash</div>

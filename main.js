@@ -2,31 +2,37 @@
   'use strict';
 
   // ============================================================
-  // 0. INITIALIZE AOS (Animate On Scroll)
+  // 0. REDUCED MOTION PREFERENCE CHECK
   // ============================================================
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,        // animate only once
-      mirror: false,
-      offset: 50,
-      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    });
-  } else {
-    console.warn('AOS library not loaded – scroll animations disabled.');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    document.documentElement.style.scrollBehavior = 'auto';
   }
 
   // ============================================================
-  // 1. MOBILE MENU
+  // 1. AOS (Animate On Scroll) – if available
   // ============================================================
+  if (typeof AOS !== 'undefined' && !reduceMotion) {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 50,
+      disable: reduceMotion
+    });
+  }
 
+  // ============================================================
+  // 2. MOBILE MENU
+  // ============================================================
   const toggle = document.getElementById('menu-toggle');
   const closeBtn = document.getElementById('nav-close');
   const nav = document.getElementById('main-nav');
   const overlay = document.getElementById('nav-overlay');
 
   function openMenu() {
+    if (!nav || !overlay || !toggle) return;
     nav.classList.add('open');
     overlay.classList.add('active');
     toggle.setAttribute('aria-expanded', 'true');
@@ -34,6 +40,7 @@
   }
 
   function closeMenu() {
+    if (!nav || !overlay || !toggle) return;
     nav.classList.remove('open');
     overlay.classList.remove('active');
     toggle.setAttribute('aria-expanded', 'false');
@@ -41,7 +48,8 @@
   }
 
   if (toggle && nav) {
-    toggle.addEventListener('click', function() {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
       if (nav.classList.contains('open')) {
         closeMenu();
       } else {
@@ -57,15 +65,13 @@
       overlay.addEventListener('click', closeMenu);
     }
 
-    // Close on Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && nav.classList.contains('open')) {
         closeMenu();
-        toggle.focus();
+        if (toggle) toggle.focus();
       }
     });
 
-    // Close on resize to desktop
     window.addEventListener('resize', function() {
       if (window.innerWidth >= 768 && nav.classList.contains('open')) {
         closeMenu();
@@ -74,24 +80,27 @@
   }
 
   // ============================================================
-  // 2. BEFORE/AFTER SLIDER (touch-friendly)
+  // 3. BEFORE / AFTER SLIDER – uses clip-path
   // ============================================================
-
   const panels = document.querySelectorAll('.reveal-panel');
 
   panels.forEach(function(panel) {
     const before = panel.querySelector('.reveal-before');
     const handle = panel.querySelector('.reveal-handle');
+    if (!before || !handle) return;
+
     let dragging = false;
     let currentValue = 50;
 
     function clamp(v, min, max) {
-      return Math.max(min, Math.min(max, v));
+      return Math.min(Math.max(v, min), max);
     }
 
     function setReveal(pct) {
-      pct = clamp(pct, 4, 96);
-      before.style.width = pct + '%';
+      pct = clamp(pct, 0, 100);
+      // clip-path: inset(0 X% 0 0) where X = 100 - pct
+      const rightInset = 100 - pct;
+      before.style.clipPath = 'inset(0 ' + rightInset + '% 0 0)';
       handle.style.left = pct + '%';
       currentValue = pct;
       panel.setAttribute('aria-valuenow', Math.round(pct));
@@ -104,11 +113,10 @@
       return (x / rect.width) * 100;
     }
 
-    // ---- Pointer events (mouse + touch) ----
     function onPointerDown(e) {
       dragging = true;
-      setReveal(getPercent(e));
       panel.setPointerCapture(e.pointerId);
+      setReveal(getPercent(e));
       e.preventDefault();
     }
 
@@ -119,7 +127,10 @@
     }
 
     function onPointerUp(e) {
-      dragging = false;
+      if (dragging) {
+        dragging = false;
+        panel.releasePointerCapture(e.pointerId);
+      }
     }
 
     panel.addEventListener('pointerdown', onPointerDown);
@@ -127,43 +138,36 @@
     panel.addEventListener('pointerup', onPointerUp);
     panel.addEventListener('pointerleave', onPointerUp);
 
-    // ---- Keyboard support ----
-    function onKeyDown(e) {
+    panel.addEventListener('keydown', function(e) {
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
         e.preventDefault();
         const step = e.key === 'ArrowLeft' ? -2 : 2;
-        const newVal = clamp(currentValue + step, 4, 96);
-        setReveal(newVal);
+        setReveal(currentValue + step);
       }
-    }
+    });
 
-    panel.addEventListener('keydown', onKeyDown);
+    panel.setAttribute('tabindex', '0');
+    panel.setAttribute('role', 'slider');
+    panel.setAttribute('aria-valuemin', '0');
+    panel.setAttribute('aria-valuemax', '100');
+    panel.setAttribute('aria-valuenow', '50');
 
-    // ---- Initialise ----
     setReveal(50);
   });
 
   // ============================================================
-  // 3. REDUCED MOTION
+  // 4. SMOOTH SCROLL FOR ANCHOR LINKS (with menu close)
   // ============================================================
-
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.documentElement.style.scrollBehavior = 'auto';
-  }
-
-  // ============================================================
-  // 4. SMOOTH SCROLL FOR ANCHOR LINKS
-  // ============================================================
-
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
+      const targetId = this.getAttribute('href');
+      const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, null, this.getAttribute('href'));
-
-        // Close mobile menu if open
+        if (history.pushState) {
+          history.pushState(null, null, targetId);
+        }
         if (nav && nav.classList.contains('open')) {
           closeMenu();
         }
@@ -171,4 +175,46 @@
     });
   });
 
+  // ============================================================
+  // 5. MAINTENANCE PLANS – FADE-IN ANIMATION
+  // ============================================================
+  (function animatePlanCards() {
+    const card = document.querySelector('#plans');
+    if (!card) return;
+
+    const cards = card.querySelectorAll('.plan-card');
+    if (cards.length === 0) return;
+
+    if (reduceMotion) {
+      cards.forEach(function(c) {
+        c.style.opacity = '1';
+        c.style.transform = 'none';
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry, index) {
+        if (entry.isIntersecting) {
+          setTimeout(function() {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 120);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -20px 0px'
+    });
+
+    cards.forEach(function(c) {
+      c.style.opacity = '0';
+      c.style.transform = 'translateY(30px)';
+      c.style.transition = 'opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      observer.observe(c);
+    });
+  })();
+
+  console.log('✅ Modern Pressure Wash – script loaded successfully');
 })();

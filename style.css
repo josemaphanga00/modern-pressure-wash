@@ -1,22 +1,22 @@
 /* ============================================================
-   VARIABLES & RESETS
+   VARIABLES & RESETS – THEME: LIGHT BG, NAVY HEADERS, ORANGE BUTTONS
    ============================================================ */
 :root {
-  --slate-night: #11232C;
-  --concrete: #F6F7F5;
-  --teal: #167A8C;
-  --teal-dark: #11616F;
-  --clay: #C2622E;
-  --green: #2F8F5B;
-  --green-dark: #236E45;
-  --slate-grey: #57676C;
-  --teal-tint: #E7F1F2;
+  --navy: #0B1E3E;
+  --navy-light: #1A3A5C;
+  --amber: #E67E22;
+  --amber-dark: #D35400;
+  --amber-light: #F39C12;
+
+  --concrete: #F8F9FA;
   --white: #FFFFFF;
+  --slate-grey: #4A5A6E;
+  --text-dark: #0B1E3E;
 
   --radius-card: 8px;
   --radius-btn: 4px;
-  --shadow: 0 4px 16px rgba(17,35,44,0.08);
-  --shadow-lift: 0 8px 24px rgba(17,35,44,0.14);
+  --shadow: 0 4px 16px rgba(11,30,62,0.08);
+  --shadow-lift: 0 8px 24px rgba(11,30,62,0.14);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -59,7 +59,7 @@ body {
   background: var(--concrete);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 74px; /* space for sticky CTA */
+  padding-bottom: 74px;
 }
 
 /* ========== FIX: Ensure all media stays within viewport ========== */
@@ -80,7 +80,7 @@ h2,
 h3 {
   font-family: 'Archivo', sans-serif;
   font-weight: 800;
-  color: var(--slate-night);
+  color: var(--navy);
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
@@ -108,12 +108,15 @@ h3 {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--teal);
+  color: var(--amber);
 }
 
 a {
-  color: var(--teal);
+  color: var(--navy);
   text-decoration: none;
+}
+a:hover {
+  color: var(--amber);
 }
 
 /* ============================================================
@@ -123,7 +126,6 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  /* FIX: ensure no overflow */
   overflow: hidden;
 }
 
@@ -132,10 +134,10 @@ section {
 }
 
 .bg-tint {
-  background: var(--teal-tint);
+  background: #F1F3F5;
 }
 .bg-night {
-  background: var(--slate-night);
+  background: var(--navy);
   color: #C7D3D6;
 }
 .bg-night h2,
@@ -145,9 +147,9 @@ section {
 
 /* === SECTION HEADINGS – LEFT ALIGNED === */
 .section-head {
-  text-align: left;          /* was center */
+  text-align: left;
   max-width: 640px;
-  margin: 0 0 var(--space-6) 0;  /* left margin removed, bottom only */
+  margin: 0 0 var(--space-6) 0;
 }
 .section-head h2 {
   margin-top: var(--space-1);
@@ -159,7 +161,7 @@ section {
 }
 
 /* ============================================================
-   BUTTONS
+   BUTTONS – ALL AMBER-ORANGE
    ============================================================ */
 .btn {
   display: inline-flex;
@@ -183,26 +185,26 @@ section {
   transform: scale(1.03);
 }
 .btn:focus-visible {
-  outline: 3px solid rgba(22, 122, 140, 0.3);
+  outline: 3px solid rgba(230, 126, 34, 0.3);
   outline-offset: 3px;
 }
 
 .btn-primary {
-  background: var(--teal);
+  background: var(--amber);
   color: #fff;
 }
 .btn-primary:hover {
-  background: var(--teal-dark);
+  background: var(--amber-dark);
   box-shadow: var(--shadow-lift);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--slate-night);
-  border: 1.5px solid var(--slate-night);
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
 }
 .btn-outline:hover {
-  background: var(--slate-night);
+  background: var(--navy);
   color: #fff;
 }
 .btn-outline.on-dark {
@@ -214,11 +216,11 @@ section {
 }
 
 .btn-whatsapp {
-  background: var(--green);
+  background: var(--amber);
   color: #fff;
 }
 .btn-whatsapp:hover {
-  background: var(--green-dark);
+  background: var(--amber-dark);
   box-shadow: var(--shadow-lift);
 }
 
@@ -229,16 +231,16 @@ section {
 }
 
 /* ============================================================
-   HEADER
+   HEADER – NAVY BACKGROUND
    ============================================================ */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(246, 247, 245, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(17, 35, 44, 0.06);
+  background: var(--navy);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
 }
 
 .header-inner {
@@ -249,7 +251,6 @@ section {
   align-items: center;
   justify-content: space-between;
   min-height: 64px;
-  /* FIX: ensure no overflow */
   overflow: hidden;
 }
 
@@ -257,10 +258,10 @@ section {
   font-family: 'Archivo', sans-serif;
   font-weight: 800;
   font-size: 1.125rem;
-  color: var(--slate-night);
+  color: var(--white);
 }
 .logo span {
-  color: var(--teal);
+  color: var(--amber);
 }
 
 /* ---- Navigation ---- */
@@ -271,14 +272,14 @@ section {
   width: 300px;
   max-width: 80vw;
   height: 100vh;
-  background: #ffffff; /* fully opaque */
+  background: var(--white);
   padding: var(--space-6) var(--space-5);
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   box-shadow: var(--shadow-lift);
   transition: right 0.3s ease;
-  z-index: 100; /* above overlay */
+  z-index: 100;
   overflow-y: auto;
 }
 
@@ -287,14 +288,14 @@ section {
 }
 
 .main-nav a {
-  color: var(--slate-night);
+  color: var(--navy);
   font-weight: 500;
   font-size: 1rem;
   padding: var(--space-2) 0;
-  border-bottom: 1px solid rgba(17, 35, 44, 0.06);
+  border-bottom: 1px solid rgba(11,30,62,0.06);
 }
 .main-nav a:hover {
-  color: var(--teal);
+  color: var(--amber);
 }
 
 .main-nav .nav-cta {
@@ -309,10 +310,10 @@ section {
   border: none;
   cursor: pointer;
   padding: var(--space-1);
-  color: var(--slate-night);
+  color: var(--navy);
 }
 .nav-close:focus-visible {
-  outline: 3px solid rgba(22, 122, 140, 0.3);
+  outline: 3px solid rgba(230, 126, 34, 0.3);
   outline-offset: 3px;
 }
 
@@ -322,11 +323,11 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(17, 35, 44, 0.4);
+  background: rgba(11,30,62,0.4);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 10; /* low, behind header and nav */
+  z-index: 10;
 }
 .nav-overlay.active {
   opacity: 1;
@@ -347,12 +348,12 @@ section {
   border: none;
   cursor: pointer;
   padding: var(--space-1);
-  color: var(--slate-night);
+  color: var(--white);
   width: 44px;
   height: 44px;
 }
 .menu-toggle:focus-visible {
-  outline: 3px solid rgba(22, 122, 140, 0.3);
+  outline: 3px solid rgba(230, 126, 34, 0.3);
   outline-offset: 3px;
 }
 
@@ -361,7 +362,7 @@ section {
 }
 
 /* ============================================================
-   HERO
+   HERO – LIGHT BACKGROUND, NAVY TEXT
    ============================================================ */
 .hero {
   padding: 0;
@@ -369,12 +370,10 @@ section {
   background: var(--concrete);
 }
 
-/* ---- Container that adds space on the sides ---- */
 .hero-wrap {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 16px;
-  /* FIX: prevent overflow */
   overflow: hidden;
 }
 
@@ -389,20 +388,21 @@ section {
   padding: var(--space-5) 0 var(--space-4) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4); /* increased from space-2 to space-4 for more breathing */
+  gap: var(--space-4);
   background: var(--concrete);
 }
 
 .hero-copy .eyebrow {
   font-size: 0.6rem;
   letter-spacing: 0.15em;
-  color: var(--teal);
+  color: var(--amber);
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: var(--space-1);
 }
 
 .hero-copy h1 {
+  color: var(--navy);
   font-size: clamp(1.6rem, 6.5vw, 2.2rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -423,18 +423,18 @@ section {
   align-items: center;
   gap: var(--space-2);
   width: fit-content;
-  background: var(--teal-tint);
-  border: 1px solid rgba(22, 122, 140, 0.2);
+  background: #FFF3E6;
+  border: 1px solid rgba(230,126,34,0.2);
   padding: var(--space-2) var(--space-4);
   border-radius: 24px;
   font-size: 0.75rem;
-  color: var(--slate-night);
+  color: var(--navy);
   font-weight: 500;
   margin-top: var(--space-1);
 }
 
 .price-chip .mono {
-  color: var(--clay);
+  color: var(--amber);
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -452,7 +452,7 @@ section {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--amber);
   flex-shrink: 0;
 }
 
@@ -481,22 +481,22 @@ section {
 }
 
 .rating-chip .stars {
-  color: var(--clay);
+  color: var(--amber);
   letter-spacing: 1px;
   font-size: 0.8rem;
 }
 
 .rating-chip a {
-  color: var(--slate-night);
+  color: var(--navy);
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: rgba(17, 35, 44, 0.2);
+  text-decoration-color: rgba(11,30,62,0.2);
   text-underline-offset: 2px;
   font-size: 0.75rem;
 }
 
 .rating-chip a:hover {
-  text-decoration-color: var(--teal);
+  text-decoration-color: var(--amber);
 }
 
 /* ---- Hero Slider ---- */
@@ -506,7 +506,7 @@ section {
   border-radius: 12px;
   background: #1a1a1a;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 35, 44, 0.12);
+  box-shadow: 0 8px 32px rgba(11,30,62,0.12);
 }
 
 /* ============================================================
@@ -661,7 +661,7 @@ section {
 
   .hero-copy {
     padding: var(--space-4) 0 var(--space-3) 0;
-    gap: var(--space-3); /* more breathing on mobile */
+    gap: var(--space-3);
   }
 
   .hero-copy .eyebrow {
@@ -725,13 +725,12 @@ section {
     font-size: 0.7rem;
   }
 
-  /* ---- Mobile slider - taller and better rounded ---- */
   .hero .reveal-panel {
     height: 320px;
     min-height: 280px;
     border-radius: 12px;
     margin: 0;
-    box-shadow: 0 4px 20px rgba(17, 35, 44, 0.1);
+    box-shadow: 0 4px 20px rgba(11,30,62,0.1);
   }
 
   .hero .reveal-label {
@@ -786,8 +785,9 @@ section {
     min-height: 240px;
   }
 }
+
 /* ============================================================
-   REVEAL PANEL (Before/After)
+   REVEAL PANEL (Before/After) – FIXED WITH clip-path
    ============================================================ */
 .reveal-panel {
   position: relative;
@@ -803,90 +803,36 @@ section {
   inset: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden; /* ensures no overflow from images */
 }
+
 .reveal-after {
   z-index: 1;
 }
+
 .reveal-before {
   z-index: 2;
-  width: 50%;
-  overflow: hidden;
+  /* clip-path is set by JavaScript; initial value 50/50 split */
+  clip-path: inset(0 50% 0 0);
+  /* border-right added by JS? Better to add here */
   border-right: 2px solid rgba(255, 255, 255, 0.6);
 }
-.reveal-before > .reveal-surface {
-  width: 100%; /* was 100vw – fix: use 100% to avoid overflow */
-  max-width: 1000px;
+
+.slider-image {
+  width: 100%;
   height: 100%;
-}
-.reveal-handle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  z-index: 3;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-.reveal-handle .grip {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: var(--shadow-lift);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  transition: transform var(--transition);
-}
-.reveal-panel:hover .grip,
-.reveal-panel:focus-within .grip {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-.reveal-handle .grip svg {
-  width: 20px;
-  height: 20px;
-  color: var(--teal);
-}
-.reveal-label {
-  position: absolute;
-  top: var(--space-3);
-  z-index: 4;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #fff;
-  background: rgba(17, 35, 44, 0.55);
-  padding: 0.25rem 0.625rem;
-  border-radius: 4px;
-}
-.reveal-label.before-label {
-  left: var(--space-3);
-}
-.reveal-label.after-label {
-  right: var(--space-3);
-}
-.reveal-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
-  background: linear-gradient(transparent, rgba(17, 35, 44, 0.8));
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 2rem var(--space-3) var(--space-2);
-  font-family: 'IBM Plex Mono', monospace;
-  pointer-events: none;
+  object-fit: cover;
+  display: block;
 }
 
-/* ---- Surface textures ---- */
+/* Ensure images fill the layers */
+.reveal-layer .slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Surface textures (keep as is) ---- */
 .surface {
   width: 100%;
   height: 100%;
@@ -934,12 +880,80 @@ section {
     radial-gradient(ellipse at 70% 60%, rgba(90, 70, 30, 0.45), transparent 50%);
 }
 
+.reveal-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  z-index: 3;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.reveal-handle .grip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: var(--shadow-lift);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: transform var(--transition);
+}
+.reveal-panel:hover .grip,
+.reveal-panel:focus-within .grip {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.reveal-handle .grip svg {
+  width: 20px;
+  height: 20px;
+  color: var(--amber);
+}
+.reveal-label {
+  position: absolute;
+  top: var(--space-3);
+  z-index: 4;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: rgba(11,30,62,0.55);
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+}
+.reveal-label.before-label {
+  left: var(--space-3);
+}
+.reveal-label.after-label {
+  right: var(--space-3);
+}
+.reveal-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background: linear-gradient(transparent, rgba(11,30,62,0.8));
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2rem var(--space-3) var(--space-2);
+  font-family: 'IBM Plex Mono', monospace;
+  pointer-events: none;
+}
+
 /* ============================================================
    PROOF STRIP
    ============================================================ */
 .proof-strip {
   padding: var(--space-4) 0;
-  background: var(--slate-night);
+  background: var(--navy);
 }
 .proof-grid {
   display: grid;
@@ -968,63 +982,104 @@ section {
   text-decoration-color: #fff;
 }
 
+
 /* ============================================================
-   SERVICES
+   SERVICES – 1 column on mobile, 2 on tablet/desktop
    ============================================================ */
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;   /* 1 column on mobile */
   gap: var(--space-4);
 }
+
+/* Tablet & Desktop (≥576px) – 2 columns */
+@media (min-width: 576px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* If you need to override any other conflicting rules, use the wrapper */
+/* But keep it inside a media query */
+@media (min-width: 576px) {
+  .wrap .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Everything else stays the same */
 .service-card {
-  background: #fff;
-  border: 1px solid rgba(17, 35, 44, 0.06);
+  background: var(--white);
+  border: 1px solid rgba(11,30,62,0.06);
   border-radius: var(--radius-card);
   padding: var(--space-5);
   transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
 .service-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
+
 .icon-badge {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: var(--teal-tint);
+  background: #FFF3E6;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-3);
+  flex-shrink: 0;
 }
-.icon-badge svg {
-  width: 22px;
-  height: 22px;
-  color: var(--teal);
+
+.icon-badge i {
+  font-size: 1.5rem;
+  color: var(--amber);
 }
+
+.service-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--space-2);
+}
+
 .service-card p {
   font-size: 0.875rem;
-  margin-top: var(--space-2);
+  color: var(--slate-grey);
+  line-height: 1.6;
+  flex: 1;
 }
+
 .price-range {
   font-size: 0.9375rem;
   margin-top: var(--space-3);
   font-weight: 600;
-  color: var(--slate-night);
+  color: var(--navy);
 }
+
 .price-range .mono {
-  color: var(--clay);
+  color: var(--amber);
   font-size: 0.9375rem;
 }
+
 .service-card .detail-link {
   display: inline-block;
   margin-top: var(--space-3);
   font-weight: 600;
   font-size: 0.8125rem;
+  color: var(--navy);
 }
+
 .service-card .detail-link:hover {
+  color: var(--amber);
   text-decoration: underline;
 }
+
 .services-cta {
   text-align: center;
   margin-top: var(--space-6);
@@ -1049,7 +1104,7 @@ section {
 }
 
 /* ============================================================
-   PROCESS – DESKTOP: HORIZONTAL ROW WITH LINES
+   PROCESS
    ============================================================ */
 .process-steps {
   display: flex;
@@ -1063,7 +1118,7 @@ section {
 }
 
 .process-step {
-  flex: 1 1 180px; /* grow, shrink, base width */
+  flex: 1 1 180px;
   min-width: 160px;
   max-width: 260px;
   display: flex;
@@ -1073,15 +1128,14 @@ section {
   position: relative;
 }
 
-/* ---- The horizontal connecting line ---- */
 .process-step:not(:last-child)::after {
   content: '';
   position: absolute;
-  top: 30px; /* aligns with the center of the circle */
+  top: 30px;
   left: calc(100% + 15px);
   width: 30px;
   height: 2px;
-  background: var(--teal);
+  background: var(--amber);
   opacity: 0.3;
 }
 
@@ -1089,7 +1143,7 @@ section {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--amber);
   color: #fff;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 700;
@@ -1104,7 +1158,7 @@ section {
 .step-content h3 {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--slate-night);
+  color: var(--navy);
   margin-bottom: var(--space-1);
 }
 
@@ -1115,7 +1169,160 @@ section {
 }
 
 /* ============================================================
-   PROCESS – MOBILE: STACKED VERTICALLY
+   MAINTENANCE PLANS – MATCHES "WHAT WE DO" STYLING
+   ============================================================ */
+
+/* Section spacing – matches other sections */
+#plans {
+  padding: var(--space-7) 0;
+}
+
+/* Plan cards – same hover as service cards */
+.plan-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: var(--space-5) var(--space-4) var(--space-4);
+  box-shadow: 0 2px 12px rgba(11,30,62,0.06);
+  border: 1px solid rgba(11,30,62,0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Featured card – amber border, no scale, same hover */
+.plan-card.featured {
+  border-color: var(--amber);
+  border-width: 2px;
+}
+
+.plan-card.featured:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--amber);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.9rem;
+  border-radius: 20px;
+}
+
+.plan-card.silver .plan-badge {
+  background: #9E9E9E;
+}
+.plan-card.platinum .plan-badge {
+  background: #6C5B7B;
+}
+
+.plan-header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(11,30,62,0.06);
+}
+
+.plan-header h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-1);
+  color: var(--navy);
+}
+
+.plan-price {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--navy);
+}
+.plan-price span {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--slate-grey);
+}
+
+.plan-sub {
+  font-size: 0.875rem;
+  color: var(--slate-grey);
+  margin-top: var(--space-1);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4) 0;
+  flex: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--slate-grey);
+  padding: var(--space-1) 0;
+}
+
+.plan-features li i {
+  color: var(--amber);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.plan-card .btn {
+  margin-top: auto;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Plan cards – responsive */
+@media (max-width: 768px) {
+  .plan-card.featured {
+    border-color: var(--amber);
+    border-width: 2px;
+  }
+  .plan-card.featured:hover {
+    transform: translateY(-2px);
+  }
+  .plan-price {
+    font-size: 1.75rem;
+  }
+  .plan-header h3 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .plan-card {
+    padding: var(--space-4);
+  }
+  .plan-badge {
+    top: -10px;
+    right: 12px;
+    font-size: 0.55rem;
+    padding: 0.15rem 0.7rem;
+  }
+  .plan-price {
+    font-size: 1.5rem;
+  }
+  .plan-features li {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ============================================================
+   PROCESS – MOBILE
    ============================================================ */
 @media (max-width: 768px) {
   .process-steps {
@@ -1135,7 +1342,6 @@ section {
     align-items: flex-start;
   }
 
-  /* Hide the horizontal line on mobile */
   .process-step:not(:last-child)::after {
     display: none;
   }
@@ -1157,7 +1363,6 @@ section {
   }
 }
 
-/* Small mobile tweak */
 @media (max-width: 480px) {
   .process-step {
     gap: var(--space-3);
@@ -1175,25 +1380,6 @@ section {
   }
 }
 
-/* On mobile, the steps stack vertically */
-@media (max-width: 768px) {
-  .process-steps {
-    flex-direction: column;      /* stack vertically */
-    align-items: stretch;
-  }
-
-  .process-step {
-    flex-direction: row;         /* circle left, text right */
-    text-align: left;
-    gap: var(--space-4);
-    align-items: flex-start;
-  }
-
-  /* Hide the horizontal line on mobile */
-  .process-step:not(:last-child)::after {
-    display: none;
-  }
-}
 /* ============================================================
    DIFFERENTIATORS
    ============================================================ */
@@ -1205,6 +1391,11 @@ section {
 }
 .diff-card {
   padding: var(--space-2) 0;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.diff-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 .diff-card h3 {
   font-size: 1.0625rem;
@@ -1218,10 +1409,10 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: #fff;
+  background: var(--white);
   border-radius: var(--radius-card);
   padding: var(--space-5);
-  border: 1px solid rgba(17, 35, 44, 0.06);
+  border: 1px solid rgba(11,30,62,0.06);
   max-width: 680px;
   margin: 0 auto;
   box-shadow: var(--shadow);
@@ -1231,7 +1422,7 @@ section {
   height: 72px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--teal), var(--slate-night));
+  background: linear-gradient(135deg, var(--amber), var(--amber-dark));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1239,18 +1430,18 @@ section {
   font-family: 'Archivo', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  box-shadow: 0 8px 24px rgba(17, 35, 44, 0.15);
+  box-shadow: 0 8px 24px rgba(11,30,62,0.15);
   margin-bottom: var(--space-3);
 }
 .founder blockquote {
   font-size: 0.875rem;
-  color: var(--slate-night);
+  color: var(--navy);
   font-style: italic;
   margin-bottom: var(--space-2);
 }
 .founder .name {
   font-weight: 700;
-  color: var(--slate-night);
+  color: var(--navy);
   font-size: 0.875rem;
 }
 .founder .role {
@@ -1267,11 +1458,16 @@ section {
   gap: var(--space-4);
 }
 .review-card {
-  background: #fff;
-  border: 1px solid rgba(17, 35, 44, 0.06);
+  background: var(--white);
+  border: 1px solid rgba(11,30,62,0.06);
   border-radius: var(--radius-card);
   padding: var(--space-4);
   position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 .review-card::before {
   content: '“';
@@ -1279,18 +1475,18 @@ section {
   top: var(--space-2);
   right: var(--space-4);
   font-size: 2.5rem;
-  color: rgba(22, 122, 140, 0.08);
+  color: rgba(230,126,34,0.08);
   font-family: serif;
 }
 .review-card .stars {
-  color: var(--clay);
+  color: var(--amber);
   font-size: 0.8125rem;
   letter-spacing: 2px;
 }
 .review-card p {
   font-size: 0.875rem;
   margin: var(--space-2) 0 var(--space-3);
-  color: var(--slate-night);
+  color: var(--navy);
 }
 .reviewer {
   display: flex;
@@ -1301,8 +1497,8 @@ section {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--teal-tint);
-  color: var(--teal);
+  background: #FFF3E6;
+  color: var(--amber);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1312,7 +1508,7 @@ section {
 .reviewer .name {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--slate-night);
+  color: var(--navy);
 }
 .reviewer .suburb {
   font-size: 0.75rem;
@@ -1324,18 +1520,19 @@ section {
 }
 
 /* ============================================================
-   FINAL CTA
+   FINAL CTA – NAVY BACKGROUND
    ============================================================ */
 .final-cta {
   text-align: center;
 }
 .final-cta .eyebrow {
-  color: #7FD0DB;
+  color: var(--amber-light);
 }
 .final-cta h2 {
   font-size: clamp(1.5rem, 4.5vw, 2.375rem);
   max-width: 600px;
   margin: var(--space-2) auto 0;
+  color: var(--white);
 }
 .final-cta p.sub {
   max-width: 480px;
@@ -1365,10 +1562,10 @@ section {
 }
 
 /* ============================================================
-   FOOTER
+   FOOTER – NAVY
    ============================================================ */
 .site-footer {
-  background: #0C1A20;
+  background: var(--navy);
   color: #8FA0A4;
   padding: var(--space-7) 0 0;
 }
@@ -1377,7 +1574,6 @@ section {
   grid-template-columns: 1fr;
   gap: var(--space-6);
   padding-bottom: var(--space-6);
-  /* FIX: prevent overflow */
   overflow: hidden;
 }
 .footer-grid .logo {
@@ -1402,7 +1598,7 @@ section {
   margin-bottom: var(--space-2);
 }
 .footer-col a:hover {
-  color: #fff;
+  color: var(--amber);
 }
 .legal-bar {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1412,14 +1608,13 @@ section {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-2);
-  /* FIX: prevent overflow */
   overflow: hidden;
 }
 .legal-bar a {
   color: #8FA0A4;
 }
 .legal-bar a:hover {
-  color: #fff;
+  color: var(--amber);
 }
 
 /* ============================================================
@@ -1435,7 +1630,7 @@ section {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(17, 35, 44, 0.06);
+  border-top: 1px solid rgba(11,30,62,0.06);
   padding: var(--space-2) var(--space-3);
   gap: var(--space-2);
 }
@@ -1487,9 +1682,6 @@ section {
     margin-bottom: 0;
     margin-right: var(--space-4);
   }
-  .process-track {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* Desktops (>= 768px) */
@@ -1519,9 +1711,13 @@ section {
     z-index: auto;
   }
   .main-nav a {
+    color: rgba(255,255,255,0.8);
     border-bottom: none;
     padding: var(--space-1) 0;
     font-size: 0.875rem;
+  }
+  .main-nav a:hover {
+    color: var(--amber);
   }
   .main-nav .nav-cta {
     display: none;
@@ -1596,7 +1792,7 @@ section {
    FOCUS VISIBLE (global)
    ============================================================ */
 :focus-visible {
-  outline: 3px solid rgba(22, 122, 140, 0.3);
+  outline: 3px solid rgba(230, 126, 34, 0.3);
   outline-offset: 3px;
 }
 
@@ -1604,7 +1800,6 @@ section {
    CUSTOM ANIMATIONS & MICRO-INTERACTIONS
    ============================================================ */
 
-/* Subtle floating animation for the founder dot */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
@@ -1613,7 +1808,6 @@ section {
   animation: float 2.5s ease-in-out infinite;
 }
 
-/* Button subtle pulse on hover */
 .btn {
   position: relative;
   overflow: hidden;
@@ -1631,25 +1825,22 @@ section {
   transform: scaleX(1);
 }
 
-/* Service card hover lift with shadow */
 .service-card {
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
 }
 .service-card:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 12px 40px rgba(17,35,44,0.12);
+  box-shadow: 0 12px 40px rgba(11,30,62,0.12);
 }
 
-/* Reveal panel grip – subtle glow */
 .reveal-handle .grip {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .reveal-panel:hover .grip,
 .reveal-panel:focus-within .grip {
-  box-shadow: 0 0 0 6px rgba(22,122,140,0.2), var(--shadow-lift);
+  box-shadow: 0 0 0 6px rgba(230,126,34,0.2), var(--shadow-lift);
 }
 
-/* Proof strip numbers – slight scale on hover */
 .proof-item .num {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -1658,7 +1849,6 @@ section {
   transform: scale(1.05);
 }
 
-/* Review cards – subtle tilt on hover */
 .review-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1667,36 +1857,32 @@ section {
   box-shadow: var(--shadow-lift);
 }
 
-/* Step circles – pulse on hover */
 .step-circle {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .process-step:hover .step-circle {
   transform: scale(1.08);
-  box-shadow: 0 0 0 6px rgba(22,122,140,0.15);
+  box-shadow: 0 0 0 6px rgba(230,126,34,0.15);
 }
 
-/* Diff cards – left border accent on hover */
 .diff-card {
   transition: transform 0.3s ease, border-color 0.3s ease, padding-left 0.3s ease;
   border-left: 3px solid transparent;
 }
 .diff-card:hover {
   transform: translateX(4px);
-  border-left-color: var(--teal);
+  border-left-color: var(--amber);
   padding-left: var(--space-4);
 }
 
-/* Founder photo – gentle pulse */
 @keyframes gentlePulse {
-  0%, 100% { box-shadow: 0 8px 24px rgba(17,35,44,0.15); }
-  50% { box-shadow: 0 8px 32px rgba(22,122,140,0.25); }
+  0%, 100% { box-shadow: 0 8px 24px rgba(11,30,62,0.15); }
+  50% { box-shadow: 0 8px 32px rgba(230,126,34,0.25); }
 }
 .founder-photo {
   animation: gentlePulse 3s ease-in-out infinite;
 }
 
-/* Sticky CTA buttons – subtle bounce when visible */
 .sticky-mobile-cta .btn {
   transition: transform 0.2s ease;
 }
@@ -1704,7 +1890,6 @@ section {
   transform: scale(0.95);
 }
 
-/* AOS overrides: ensure animations are smooth */
 [data-aos] {
   pointer-events: none;
 }
@@ -1712,7 +1897,6 @@ section {
   pointer-events: auto;
 }
 
-/* Reduced motion: disable all animations if user prefers */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1727,23 +1911,9 @@ section {
   }
 }
 
-/* Slider images – fill the container */
-.slider-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* The "before" layer needs the image to stretch wider so it fills when clipped */
-.reveal-before .slider-image {
-  width: 100%; /* was 100vw – fix: use 100% to avoid overflow */
-  max-width: 1000px;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Gallery slider heights */
+/* ============================================================
+   GALLERY RESPONSIVE (kept as before)
+   ============================================================ */
 .gallery-grid .reveal-panel {
   height: 240px;
   min-height: 200px;
@@ -1762,3 +1932,35 @@ section {
     height: 360px;
   }
 }
+
+/* ============================================================
+   LOGO WITH IMAGE (added at the end)
+   ============================================================ */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--white);
+  white-space: nowrap;
+}
+.logo-text span {
+  color: var(--amber);
+}
+
+/* .services-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+} */
