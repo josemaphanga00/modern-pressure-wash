@@ -217,4 +217,26 @@
   })();
 
   console.log('✅ Modern Pressure Wash – script loaded successfully');
+
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+
+  let lastScroll = 0;
+  const threshold = 300; // show after 300px scroll
+
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > threshold) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  });
+
+  // Initial state: hidden
+  btn.style.opacity = '0';
+  btn.style.pointerEvents = 'none';
+  btn.style.transition = 'opacity 0.3s ease';
 })();

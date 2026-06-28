@@ -1235,7 +1235,7 @@ section {
 }
 
 .plan-header h3 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin-bottom: var(--space-1);
   color: var(--navy);
 }
@@ -1961,6 +1961,37 @@ section {
   color: var(--amber);
 }
 
-/* .services-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-} */
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lift);
+  text-decoration: none;
+  transition: transform var(--transition), background var(--transition), opacity var(--transition);
+  opacity: 0.8;
+  z-index: 40;
+}
+
+.back-to-top:hover {
+  background: var(--amber-dark);
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  stroke-width: 2.5;
+}
