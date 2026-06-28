@@ -963,15 +963,17 @@ section {
 .proof-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;  /* pushes side items outward, keeps middle centred */
   align-items: center;
-  gap: var(--space-5) var(--space-6);  /* row gap and column gap */
+  max-width: 1200px;               /* adjust to control how far apart they spread */
+  margin: 0 auto;                 /* centre the whole block */
+  gap: var(--space-4);            /* optional: adds a minimal gap when wrapping */
   text-align: center;
 }
 
 .proof-item {
-  flex: 0 1 auto;  /* don't grow, only shrink if needed */
-  min-width: 120px; /* optional, prevents items from being too narrow */
+  flex: 0 1 auto;                /* don't grow, only shrink */
+  min-width: 100px;              /* optional, prevents too narrow on small screens */
 }
 
 .proof-item .num {
