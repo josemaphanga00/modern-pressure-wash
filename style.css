@@ -955,29 +955,46 @@ section {
   padding: var(--space-4) 0;
   background: var(--navy);
 }
+.proof-strip {
+  padding: var(--space-4) 0;
+  background: var(--navy);
+}
+
 .proof-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-5) var(--space-6);  /* row gap and column gap */
   text-align: center;
 }
+
+.proof-item {
+  flex: 0 1 auto;  /* don't grow, only shrink if needed */
+  min-width: 120px; /* optional, prevents items from being too narrow */
+}
+
 .proof-item .num {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
   font-size: 1.125rem;
   color: #fff;
+  display: block; /* ensure number is on its own line */
 }
+
 .proof-item .label {
   font-size: 0.75rem;
   color: #9FB0B4;
   margin-top: var(--space-1);
   display: block;
 }
+
 .proof-item a {
   color: #fff;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.3);
 }
+
 .proof-item a:hover {
   text-decoration-color: #fff;
 }
