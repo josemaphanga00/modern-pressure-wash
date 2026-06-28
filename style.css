@@ -1422,7 +1422,7 @@ section {
   height: 72px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--amber), var(--amber-dark));
+  background: linear-gradient(135deg, var(--white), var(--white));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1939,7 +1939,7 @@ section {
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0rem;   /* or 0.25rem, or even 0 */
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -1994,4 +1994,114 @@ section {
   height: 24px;
   stroke: #fff;
   stroke-width: 2.5;
+}
+
+/* ============================================================
+   PRIVACY POLICY SECTION
+   ============================================================ */
+.privacy-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-block {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid rgba(11,30,62,0.06);
+}
+
+.privacy-block:last-child {
+  border-bottom: none;
+}
+
+.privacy-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.privacy-body {
+  flex: 1;
+}
+
+.privacy-body h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--space-2);
+}
+
+.privacy-body p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--slate-grey);
+  margin-bottom: var(--space-2);
+}
+
+/* Creative bullet points */
+.privacy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.privacy-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--slate-grey);
+}
+
+.privacy-list li i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 1.1rem;
+  color: var(--amber);
+}
+
+.privacy-list li strong {
+  color: var(--navy);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .privacy-block {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4) 0;
+  }
+
+  .privacy-number {
+    width: 40px;
+    height: 40px;
+    font-size: 0.875rem;
+  }
+
+  .privacy-body h3 {
+    font-size: 1rem;
+  }
+
+  .privacy-body p,
+  .privacy-list li {
+    font-size: 0.875rem;
+  }
+
+  .privacy-list li {
+    gap: var(--space-2);
+  }
 }
