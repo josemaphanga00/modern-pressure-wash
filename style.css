@@ -7,6 +7,7 @@
   --amber: #E67E22;
   --amber-dark: #D35400;
   --amber-light: #F39C12;
+  --amber-tint: #FFF3E6;
 
   --concrete: #F8F9FA;
   --white: #FFFFFF;
@@ -47,7 +48,6 @@ body {
   max-width: 100%;
   position: relative;
 }
-/* ============================================================ */
 
 html {
   scroll-behavior: smooth;
@@ -70,7 +70,25 @@ video {
   height: auto;
   display: block;
 }
-/* ============================================================ */
+
+/* ========== SKIP LINK (for keyboard users) ========== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  background: var(--amber);
+  color: #fff;
+  font-weight: 600;
+  z-index: 999;
+  border-radius: var(--radius-btn);
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
 
 /* ============================================================
    TYPOGRAPHY
@@ -423,7 +441,7 @@ section {
   align-items: center;
   gap: var(--space-2);
   width: fit-content;
-  background: #FFF3E6;
+  background: var(--amber-tint);
   border: 1px solid rgba(230,126,34,0.2);
   padding: var(--space-2) var(--space-4);
   border-radius: 24px;
@@ -803,7 +821,7 @@ section {
   inset: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* ensures no overflow from images */
+  overflow: hidden;
 }
 
 .reveal-after {
@@ -812,9 +830,7 @@ section {
 
 .reveal-before {
   z-index: 2;
-  /* clip-path is set by JavaScript; initial value 50/50 split */
   clip-path: inset(0 50% 0 0);
-  /* border-right added by JS? Better to add here */
   border-right: 2px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -825,14 +841,13 @@ section {
   display: block;
 }
 
-/* Ensure images fill the layers */
 .reveal-layer .slider-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* ---- Surface textures (keep as is) ---- */
+/* ---- Surface textures ---- */
 .surface {
   width: 100%;
   height: 100%;
@@ -955,25 +970,21 @@ section {
   padding: var(--space-4) 0;
   background: var(--navy);
 }
-.proof-strip {
-  padding: var(--space-4) 0;
-  background: var(--navy);
-}
 
 .proof-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;  /* pushes side items outward, keeps middle centred */
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;               /* adjust to control how far apart they spread */
-  margin: 0 auto;                 /* centre the whole block */
-  gap: var(--space-4);            /* optional: adds a minimal gap when wrapping */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: var(--space-4);
   text-align: center;
 }
 
 .proof-item {
-  flex: 0 1 auto;                /* don't grow, only shrink */
-  min-width: 100px;              /* optional, prevents too narrow on small screens */
+  flex: 0 1 auto;
+  min-width: 100px;
 }
 
 .proof-item .num {
@@ -981,7 +992,7 @@ section {
   font-weight: 500;
   font-size: 1.125rem;
   color: #fff;
-  display: block; /* ensure number is on its own line */
+  display: block;
 }
 
 .proof-item .label {
@@ -1001,13 +1012,12 @@ section {
   text-decoration-color: #fff;
 }
 
-
 /* ============================================================
    SERVICES – 1 column on mobile, 2 on tablet/desktop
    ============================================================ */
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr;   /* 1 column on mobile */
+  grid-template-columns: 1fr;
   gap: var(--space-4);
 }
 
@@ -1018,15 +1028,13 @@ section {
   }
 }
 
-/* If you need to override any other conflicting rules, use the wrapper */
-/* But keep it inside a media query */
+/* More specific selector to override any conflicts */
 @media (min-width: 576px) {
   .wrap .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Everything else stays the same */
 .service-card {
   background: var(--white);
   border: 1px solid rgba(11,30,62,0.06);
@@ -1047,7 +1055,7 @@ section {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: #FFF3E6;
+  background: var(--amber-tint);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1254,7 +1262,7 @@ section {
 }
 
 .plan-header h3 {
-  font-size: 2rem;
+  font-size: 1.25rem;
   margin-bottom: var(--space-1);
   color: var(--navy);
 }
@@ -1441,16 +1449,18 @@ section {
   height: 72px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--white), var(--white));
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
   box-shadow: 0 8px 24px rgba(11,30,62,0.15);
   margin-bottom: var(--space-3);
+  overflow: hidden;
+}
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .founder blockquote {
   font-size: 0.875rem;
@@ -1516,7 +1526,7 @@ section {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #FFF3E6;
+  background: var(--amber-tint);
   color: var(--amber);
   display: flex;
   align-items: center;
@@ -1811,7 +1821,7 @@ section {
    FOCUS VISIBLE (global)
    ============================================================ */
 :focus-visible {
-  outline: 3px solid rgba(230, 126, 34, 0.3);
+  outline: 3px solid var(--amber);
   outline-offset: 3px;
 }
 
@@ -1931,7 +1941,7 @@ section {
 }
 
 /* ============================================================
-   GALLERY RESPONSIVE (kept as before)
+   GALLERY RESPONSIVE
    ============================================================ */
 .gallery-grid .reveal-panel {
   height: 240px;
@@ -1953,12 +1963,12 @@ section {
 }
 
 /* ============================================================
-   LOGO WITH IMAGE (added at the end)
+   LOGO WITH IMAGE
    ============================================================ */
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 0rem;   /* or 0.25rem, or even 0 */
+  gap: 0.5rem;
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -2015,6 +2025,20 @@ section {
   stroke-width: 2.5;
 }
 
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 5rem;  /* was 1.5rem – raises it up */
+    right: 1.5rem;
+  }
+}
+
+/* Even smaller screens (if you want it even higher) */
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 6.5rem; /* clears the sticky CTA on very small screens */
+  }
+}
+
 /* ============================================================
    PRIVACY POLICY SECTION
    ============================================================ */
@@ -2069,7 +2093,6 @@ section {
   margin-bottom: var(--space-2);
 }
 
-/* Creative bullet points */
 .privacy-list {
   list-style: none;
   padding: 0;
@@ -2097,7 +2120,9 @@ section {
   color: var(--navy);
 }
 
-/* Responsive */
+/* ============================================================
+   PRIVACY – RESPONSIVE
+   ============================================================ */
 @media (max-width: 576px) {
   .privacy-block {
     flex-direction: column;

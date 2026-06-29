@@ -24,13 +24,17 @@
   }
 
   // ============================================================
-  // 2. MOBILE MENU
+  // 2. CACHE DOM ELEMENTS
   // ============================================================
   const toggle = document.getElementById('menu-toggle');
   const closeBtn = document.getElementById('nav-close');
   const nav = document.getElementById('main-nav');
   const overlay = document.getElementById('nav-overlay');
+  const backToTopBtn = document.querySelector('.back-to-top');
 
+  // ============================================================
+  // 3. MOBILE MENU
+  // ============================================================
   function openMenu() {
     if (!nav || !overlay || !toggle) return;
     nav.classList.add('open');
@@ -72,6 +76,7 @@
       }
     });
 
+    // Close menu on resize to desktop
     window.addEventListener('resize', function() {
       if (window.innerWidth >= 768 && nav.classList.contains('open')) {
         closeMenu();
@@ -80,7 +85,7 @@
   }
 
   // ============================================================
-  // 3. BEFORE / AFTER SLIDER – uses clip-path
+  // 4. BEFORE / AFTER SLIDER – uses clip-path
   // ============================================================
   const panels = document.querySelectorAll('.reveal-panel');
 
@@ -98,7 +103,6 @@
 
     function setReveal(pct) {
       pct = clamp(pct, 0, 100);
-      // clip-path: inset(0 X% 0 0) where X = 100 - pct
       const rightInset = 100 - pct;
       before.style.clipPath = 'inset(0 ' + rightInset + '% 0 0)';
       handle.style.left = pct + '%';
@@ -156,7 +160,7 @@
   });
 
   // ============================================================
-  // 4. SMOOTH SCROLL FOR ANCHOR LINKS (with menu close)
+  // 5. SMOOTH SCROLL FOR ANCHOR LINKS (with menu close)
   // ============================================================
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
@@ -176,7 +180,7 @@
   });
 
   // ============================================================
-  // 5. MAINTENANCE PLANS – FADE-IN ANIMATION
+  // 6. MAINTENANCE PLANS – FADE-IN ANIMATION
   // ============================================================
   (function animatePlanCards() {
     const card = document.querySelector('#plans');
@@ -216,27 +220,49 @@
     });
   })();
 
-  console.log('✅ Modern Pressure Wash – script loaded successfully');
+  // ============================================================
+  // 7. BACK TO TOP BUTTON – with debounce
+  // ============================================================
+  if (backToTopBtn) {
+    // Initial state: hidden
+    backToTopBtn.style.opacity = '0';
+    backToTopBtn.style.pointerEvents = 'none';
+    backToTopBtn.style.transition = 'opacity 0.3s ease';
 
-  const btn = document.querySelector('.back-to-top');
-  if (!btn) return;
+    let debounceTimeout = null;
+    const threshold = 300; // show after 300px scroll
 
-  let lastScroll = 0;
-  const threshold = 300; // show after 300px scroll
-
-  window.addEventListener('scroll', function() {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > threshold) {
-      btn.style.opacity = '1';
-      btn.style.pointerEvents = 'auto';
-    } else {
-      btn.style.opacity = '0';
-      btn.style.pointerEvents = 'none';
+    function handleScroll() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > threshold) {
+        backToTopBtn.style.opacity = '1';
+        backToTopBtn.style.pointerEvents = 'auto';
+      } else {
+        backToTopBtn.style.opacity = '0';
+        backToTopBtn.style.pointerEvents = 'none';
+      }
     }
-  });
 
-  // Initial state: hidden
-  btn.style.opacity = '0';
-  btn.style.pointerEvents = 'none';
-  btn.style.transition = 'opacity 0.3s ease';
+    // Debounced scroll handler
+    function debouncedScroll() {
+      if (debounceTimeout) {
+        cancelAnimationFrame(debounceTimeout);
+      }
+      debounceTimeout = requestAnimationFrame(handleScroll);
+    }
+
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+    // Cleanup on page unload (optional but good practice)
+    window.addEventListener('beforeunload', function() {
+      window.removeEventListener('scroll', debouncedScroll);
+    });
+  }
+
+  // ============================================================
+  // 8. (Optional) Log only in development
+  // ============================================================
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    console.log('✅ Modern Pressure Wash – script loaded successfully');
+  }
 })();

@@ -5,13 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Modern Pressure Wash — Gauteng's Pressure Washing Specialists</title>
   <meta name="description" content="Gauteng's trusted pressure washing specialists. Roof, driveway, gutter cleaning with real before/after results. Free quote from owner Israel." />
-  <link rel="canonical" href="https://www.modernpressurewash.co.za/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.modernpressurewash.co.za" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Modern Pressure Wash — See Your Property Like New" />
   <meta property="og:description" content="Gauteng's pressure washing specialists. Real results, transparent pricing, you inspect before you pay." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.modernpressurewash.co.za/" />
+  <meta property="og:url" content="https://www.modernpressurewash.co.za" />
+  <meta property="og:image" content="https://www.modernpressurewash.co.za/Website%20Logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Modern Pressure Wash — See Your Property Like New" />
+  <meta name="twitter:description" content="Gauteng's pressure washing specialists. Real results, transparent pricing, you inspect before you pay." />
+  <meta name="twitter:image" content="https://www.modernpressurewash.co.za/Website%20Logo.png" />
 
   <!-- Favicon -->
   <link rel="icon" href="Website Logo.png" type="image/png" />
@@ -23,6 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
 
   <!-- AOS -->
+  <link rel="preconnect" href="https://unpkg.com" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <!-- Bootstrap & Icons -->
@@ -60,14 +71,17 @@
 </head>
 <body>
 
+  <!-- ===== SKIP LINK (for keyboard users) ===== -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ===== OVERLAY ===== -->
   <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- ===== HEADER ===== -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="/" class="logo-link">
-        <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" />
+      <a href="/" class="logo-link" aria-label="Modern Pressure Wash – Home">
+        <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="45" height="45" />
         <span class="logo-text">Modern <span>Pressure Wash</span></span>
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
@@ -98,7 +112,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ===== HERO ===== -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
@@ -121,12 +135,12 @@
           </div>
 
           <!-- HERO SLIDER -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway restoration" aria-labelledby="hero-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
             <div class="reveal-layer reveal-after">
-              <img src="Job B/B1.webp" alt="Clean driveway" class="slider-image" loading="lazy" />
+              <img src="Job B/B1.webp" alt="Clean driveway after restoration" class="slider-image" loading="lazy" width="800" height="600" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job B/B.webp" alt="Dirty driveway" class="slider-image" loading="lazy" />
+              <img src="Job B/B.webp" alt="Dirty driveway before restoration" class="slider-image" loading="lazy" width="800" height="600" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">BEFORE</span>
             <span class="reveal-label after-label" aria-hidden="true">AFTER</span>
@@ -164,28 +178,28 @@
         <div class="services-grid">
           <!-- 1. Driveway Restoration -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="icon-badge"><i class="bi bi-car-front"></i></div>
+            <div class="icon-badge"><i class="bi bi-car-front" aria-hidden="true"></i></div>
             <h3>Driveway Restoration</h3>
             <p>Vehicular traffic quickly tracks oil, tire marks, and deep-seated grime into porous paving and concrete. Utilizing precision pressure systems, we extract embedded pollutants and tough stains – safely restoring immaculate curb appeal while preventing the long-term degradation of your stone surfaces.</p>
           </div>
 
           <!-- 2. Paving Restoration -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="icon-badge"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+            <div class="icon-badge"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></div>
             <h3>Paving Restoration</h3>
             <p>South Africa's intense summer heat and heavy downpours create the perfect breeding ground for deep-seated grime, stubborn moss, and unsightly black algae on porous paving that a standard hose pipe can't touch. Our specialized deep-clean systems penetrate deep into the paver's surface, extracting embedded pollutants and eliminating slick moss at the root – instantly restoring your driveway or entertainment patio to its original, pristine look.</p>
           </div>
 
           <!-- 3. Low-Pressure Roof Washing -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="icon-badge"><i class="bi bi-house"></i></div>
+            <div class="icon-badge"><i class="bi bi-house" aria-hidden="true"></i></div>
             <h3>Low-Pressure Roof Washing</h3>
             <p>High pressure can permanently destroy roof tiles and exterior plaster coatings. We utilize specialized soft-wash chemical systems to safely kill algae, mould, and moss at the root, preserving your structural integrity and extending your paintwork's lifespan.</p>
           </div>
 
           <!-- 4. Commercial & HOA Facility Maintenance -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="icon-badge"><i class="bi bi-building"></i></div>
+            <div class="icon-badge"><i class="bi bi-building" aria-hidden="true"></i></div>
             <h3>Commercial & HOA Facility Maintenance</h3>
             <p>High-traffic commercial properties demand consistent safety and cleanliness compliance. We provide scheduled, recurring maintenance programs for retail strips, office parks, and residential estates – focusing on dumpster pads, drive-thrus, parking structures, and boundary walls.</p>
           </div>
@@ -215,9 +229,9 @@
                 <p class="plan-sub">Serviced Every 6 Months</p>
               </div>
               <ul class="plan-features">
-                <li><i class="bi bi-check-circle-fill"></i> Moderate-traffic residential homes and properties looking to keep winter grime and seasonal moss at bay.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Full structural facade soft-wash, comprehensive driveway deep-clean, and main external gutter clearing.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Protects your paintwork and prevents long-term masonry staining before it sets in.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Moderate-traffic residential homes and properties looking to keep winter grime and seasonal moss at bay.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Full structural facade soft-wash, comprehensive driveway deep-clean, and main external gutter clearing.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Protects your paintwork and prevents long-term masonry staining before it sets in.</li>
               </ul>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc85iJdZs2S5slCPJevNg05U0ZQ59esjcHS15aGBW4bk8s-Ow/viewform" target="_blank" class="btn btn-primary w-100">Choose Silver</a>
             </div>
@@ -231,9 +245,9 @@
                 <p class="plan-sub">Serviced Every 3 Months</p>
               </div>
               <ul class="plan-features">
-                <li><i class="bi bi-check-circle-fill"></i> High-value residential estates, busy commercial entrances, and properties with heavy tree cover or high foot traffic.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Everything in Silver Care, plus a full perimeter boundary wall wash, outdoor entertainment patios, and immediate high-traffic walkway stain removal.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Complete, proactive asset protection. Your property remains consistently pristine without ever reaching a visibly soiled state.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> High-value residential estates, busy commercial entrances, and properties with heavy tree cover or high foot traffic.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Everything in Silver Care, plus a full perimeter boundary wall wash, outdoor entertainment patios, and immediate high-traffic walkway stain removal.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Complete, proactive asset protection. Your property remains consistently pristine without ever reaching a visibly soiled state.</li>
               </ul>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc85iJdZs2S5slCPJevNg05U0ZQ59esjcHS15aGBW4bk8s-Ow/viewform" target="_blank" class="btn btn-primary w-100">Choose Gold</a>
             </div>
@@ -247,9 +261,9 @@
                 <p class="plan-sub">Serviced Every 2 Months</p>
               </div>
               <ul class="plan-features">
-                <li><i class="bi bi-check-circle-fill"></i> Premium commercial facilities, drive-thrus, high-frequency retail strips, and restaurant dumpster zones.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Intensive surface degreasing, constant oil and chewing gum removal, public health sanitation compliance, and comprehensive structural washing.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Ultimate liability reduction. Completely eliminates slip-and-fall hazards caused by oily or algae-slick walkways and keeps corporate properties looking flawless to customers.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Premium commercial facilities, drive-thrus, high-frequency retail strips, and restaurant dumpster zones.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Intensive surface degreasing, constant oil and chewing gum removal, public health sanitation compliance, and comprehensive structural washing.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Ultimate liability reduction. Completely eliminates slip-and-fall hazards caused by oily or algae-slick walkways and keeps corporate properties looking flawless to customers.</li>
               </ul>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc85iJdZs2S5slCPJevNg05U0ZQ59esjcHS15aGBW4bk8s-Ow/viewform" target="_blank" class="btn btn-primary w-100">Choose Platinum</a>
             </div>
@@ -257,7 +271,7 @@
         </div>
         <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="600">
           <p class="text-muted" style="font-size: 1rem; line-height: 1.8;">
-            <i class="bi bi-info-circle me-2" style="color: var(--amber); font-size: 1.2rem;"></i>
+            <i class="bi bi-info-circle me-2" style="color: var(--amber); font-size: 1.2rem;" aria-hidden="true"></i>
             <strong style="font-weight: 800; font-size: 1.05rem;">Important Note:</strong>
             <span style="font-weight: 500;">All care plans are calculated based on your specific property layout and square meter volume; to ensure the highest standard of restoration, properties requiring heavy initial deep-cleans may be subject to an upfront baseline treatment fee before the monthly subscription cycle begins.</span>
           </p>
@@ -276,12 +290,12 @@
         <div class="gallery-grid">
 
           <!-- 1. Driveway -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
             <div class="reveal-layer reveal-after">
-              <img src="Job F/F2.webp" alt="Clean driveway" class="slider-image" loading="lazy" />
+              <img src="Job F/F2.webp" alt="Clean driveway after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job F/F.webp" alt="Dirty driveway" class="slider-image" loading="lazy" />
+              <img src="Job F/F.webp" alt="Dirty driveway before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -296,12 +310,12 @@
           </div>
 
           <!-- 2. Roof -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after roof" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after roof restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
             <div class="reveal-layer reveal-after">
-              <img src="Job D/D2.webp" alt="Clean roof" class="slider-image" loading="lazy" />
+              <img src="Job D/D2.webp" alt="Clean roof after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job D/D.webp" alt="Dirty roof" class="slider-image" loading="lazy" />
+              <img src="Job D/D.webp" alt="Dirty roof before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -316,12 +330,12 @@
           </div>
 
           <!-- 3. Patio -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after patio" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after patio restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
             <div class="reveal-layer reveal-after">
-              <img src="Job G/G2.webp" alt="Clean patio" class="slider-image" loading="lazy" />
+              <img src="Job G/G2.webp" alt="Clean patio after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job G/G.webp" alt="Dirty patio" class="slider-image" loading="lazy" />
+              <img src="Job G/G.webp" alt="Dirty patio before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -336,12 +350,12 @@
           </div>
 
           <!-- 4. Gutter -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after gutter" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after gutter restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
             <div class="reveal-layer reveal-after">
-              <img src="Job A/A.webp" alt="Clean gutter" class="slider-image" loading="lazy" />
+              <img src="Job A/A.webp" alt="Clean gutter after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job A/A1.webp" alt="Dirty gutter" class="slider-image" loading="lazy" />
+              <img src="Job A/A1.webp" alt="Dirty gutter before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -356,12 +370,12 @@
           </div>
 
           <!-- 5. Facade / Wall -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after facade" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after facade restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
             <div class="reveal-layer reveal-after">
-              <img src="Job H/H2.webp" alt="Clean facade" class="slider-image" loading="lazy" />
+              <img src="Job H/H2.webp" alt="Clean facade after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job H/H.webp" alt="Dirty facade" class="slider-image" loading="lazy" />
+              <img src="Job H/H.webp" alt="Dirty facade before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -376,12 +390,12 @@
           </div>
 
           <!-- 6. Commercial Entrance -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after commercial entrance" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after commercial entrance restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
             <div class="reveal-layer reveal-after">
-              <img src="Job E/E.webp" alt="Clean commercial entrance" class="slider-image" loading="lazy" />
+              <img src="Job E/E.webp" alt="Clean commercial entrance after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job E/E1.webp" alt="Dirty commercial entrance" class="slider-image" loading="lazy" />
+              <img src="Job E/E1.webp" alt="Dirty commercial entrance before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -396,12 +410,12 @@
           </div>
 
           <!-- 7. Pool / Deck Area -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after pool deck" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after pool deck restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
             <div class="reveal-layer reveal-after">
-              <img src="Job J/J2.webp" alt="Clean pool deck" class="slider-image" loading="lazy" />
+              <img src="Job J/J2.webp" alt="Clean pool deck after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job J/J.webp" alt="Dirty pool deck" class="slider-image" loading="lazy" />
+              <img src="Job J/J.webp" alt="Dirty pool deck before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -416,12 +430,12 @@
           </div>
 
           <!-- 8. Walkway / Pathway -->
-          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after walkway" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700">
+          <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after walkway restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700">
             <div class="reveal-layer reveal-after">
-              <img src="Job C/C1.webp" alt="Clean walkway" class="slider-image" loading="lazy" />
+              <img src="Job C/C1.webp" alt="Clean walkway after restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <div class="reveal-layer reveal-before">
-              <img src="Job C/C.webp" alt="Dirty walkway" class="slider-image" loading="lazy" />
+              <img src="Job C/C.webp" alt="Dirty walkway before restoration" class="slider-image" loading="lazy" width="600" height="400" />
             </div>
             <span class="reveal-label before-label" aria-hidden="true">Before</span>
             <span class="reveal-label after-label" aria-hidden="true">After</span>
@@ -448,28 +462,28 @@
         </div>
         <div class="process-steps">
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="step-circle">01</div>
+            <div class="step-circle" aria-hidden="true">01</div>
             <div class="step-content">
               <h3>Digital Layout Assessment</h3>
               <p>Send us your location or property photos. Our team analyses your total square meter volume and structural layouts to map out a highly accurate, custom project plan.</p>
             </div>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="step-circle">02</div>
+            <div class="step-circle" aria-hidden="true">02</div>
             <div class="step-content">
               <h3>Custom Engineering Scope</h3>
               <p>We compile a professional, itemized proposal detailing the exact cleaning methodologies, chemical safety requirements, and target timelines required for your project.</p>
             </div>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="step-circle">03</div>
+            <div class="step-circle" aria-hidden="true">03</div>
             <div class="step-content">
               <h3>Precision Cleaning Operations</h3>
               <p>Our skilled technical teams arrive on-site with advanced equipment, carefully managing water flow, environmental protection, and surface precision without disrupting your day.</p>
             </div>
           </div>
           <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="step-circle">04</div>
+            <div class="step-circle" aria-hidden="true">04</div>
             <div class="step-content">
               <h3>Quality Sign-Off</h3>
               <p>We perform a meticulous walk-through of the restored surfaces alongside your team to ensure every single square meter meets our premium company standards.</p>
@@ -489,8 +503,7 @@
         <div class="diff-grid">
           <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
             <h3>100% Quality Sign-Off</h3>
-            <p>We don’t pack until you are satisfied. 
-Every project concludes with a mandatory, side-by-side site inspection to guarantee our restoration meets your strict standards before final invoicing.</p>
+            <p>We don't pack until you are satisfied. Every project concludes with a mandatory, side-by-side site inspection to guarantee our restoration meets your strict standards before final invoicing.</p>
           </div>
           <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <h3>Transparent, Expert Pricing</h3>
@@ -503,12 +516,12 @@ Every project concludes with a mandatory, side-by-side site inspection to guaran
         </div>
         <div class="founder" data-aos="flip-up" data-aos-duration="700">
           <div class="founder-photo" aria-hidden="true">
-            <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" />
+            <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="72" height="72" />
           </div>
           <div>
             <h3>The Modern Standard</h3>
             <p>
-              Modern Pressure Wash was established to bridge the gap between informal exterior cleaning and true corporate facility asset management. We recognized that property owners were constantly frustrated by unreliable contractors who used aggressive, damaging water pressure and lacked structural knowledge. We approach pressure washing as an engineering task, not just a cleaning chore. By calculating the exact thermal, chemical, and pressure requirements for every unique material - from sensitive clay bricks to durable concrete panels - we maximize restoration results while guaranteeing the absolute safety of your property. We don't just clear dirt; we protect your long-term real estate investments.
+              Modern Pressure Wash was established to bridge the gap between informal exterior cleaning and true corporate facility asset management. We recognized that property owners were constantly frustrated by unreliable contractors who used aggressive, damaging water pressure and lacked structural knowledge. We approach pressure washing as an engineering task, not just a cleaning chore. By calculating the exact thermal, chemical, and pressure requirements for every unique material – from sensitive clay bricks to durable concrete panels – we maximize restoration results while guaranteeing the absolute safety of your property. We don't just clear dirt; we protect your long-term real estate investments.
             </p>
           </div>
         </div>
@@ -542,7 +555,7 @@ Every project concludes with a mandatory, side-by-side site inspection to guaran
           </article>
           <article class="review-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <div class="stars" aria-hidden="true">★★★★★</div>
-            <p>"Thank you for a job exceptionally well done. The paving looks fantastic! We really appreciate all the hard work, attention to detail, and the effort your team put in. You truly went above and beyond, and it shows in the final result. Highly appreciated - thank you again!"</p>
+            <p>"Thank you for a job exceptionally well done. The paving looks fantastic! We really appreciate all the hard work, attention to detail, and the effort your team put in. You truly went above and beyond, and it shows in the final result. Highly appreciated – thank you again!"</p>
             <footer class="reviewer">
               <div class="avatar" aria-hidden="true">J</div>
               <div><span class="name">Joyce H.</span> <span class="suburb"></span></div>
@@ -555,7 +568,7 @@ Every project concludes with a mandatory, side-by-side site inspection to guaran
       </div>
     </section>
 
-    <!-- ===== PRIVACY POLICY SECTION (Now BEFORE Final CTA) ===== -->
+    <!-- ===== PRIVACY POLICY SECTION ===== -->
     <section id="privacy" class="bg-tint" aria-labelledby="privacy-title">
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
@@ -576,77 +589,77 @@ Every project concludes with a mandatory, side-by-side site inspection to guaran
 
           <!-- 1. INFORMATION WE COLLECT -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="privacy-number">01</div>
+            <div class="privacy-number" aria-hidden="true">01</div>
             <div class="privacy-body">
               <h3>Information We Collect</h3>
               <p>We only collect personal information that is relevant and necessary for providing our property preservation and surface restoration services. This includes:</p>
               <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Identifiable Information:</strong> Name, surname, company name (if applicable), registration numbers, and job titles (for commercial entities).</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Contact Information:</strong> Email address, mobile numbers, and WhatsApp contact details.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Property Information:</strong> Physical addresses of residential properties or commercial facilities requiring assessment, layout descriptions, structural details, and property photos uploaded via our intake forms.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Technical Data:</strong> IP addresses, browser types, cookies, and usage data gathered automatically when you browse our website.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Identifiable Information:</strong> Name, surname, company name (if applicable), registration numbers, and job titles (for commercial entities).</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Contact Information:</strong> Email address, mobile numbers, and WhatsApp contact details.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Property Information:</strong> Physical addresses of residential properties or commercial facilities requiring assessment, layout descriptions, structural details, and property photos uploaded via our intake forms.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Technical Data:</strong> IP addresses, browser types, cookies, and usage data gathered automatically when you browse our website.</li>
               </ul>
             </div>
           </div>
 
           <!-- 2. HOW WE USE YOUR INFORMATION -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="privacy-number">02</div>
+            <div class="privacy-number" aria-hidden="true">02</div>
             <div class="privacy-body">
               <h3>How We Use Your Information</h3>
               <p>Your personal data is processed lawfully and transparently for specific business operations, including:</p>
               <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill"></i> Formulating highly accurate, itemized project proposals and Service Level Agreements (SLAs).</li>
-                <li><i class="bi bi-check-circle-fill"></i> Scheduling technical teams, executing precision cleaning operations, and conducting quality sign-offs.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Processing secure monthly subscription billings through our authorized financial merchant gateway (PayFast).</li>
-                <li><i class="bi bi-check-circle-fill"></i> Sending automated service reminders, property updates, and before-and-after operational reports.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Formulating highly accurate, itemized project proposals and Service Level Agreements (SLAs).</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Scheduling technical teams, executing precision cleaning operations, and conducting quality sign-offs.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Processing secure monthly subscription billings through our authorized financial merchant gateway (PayFast).</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Sending automated service reminders, property updates, and before-and-after operational reports.</li>
               </ul>
             </div>
           </div>
 
           <!-- 3. DATA RETENTION AND DESTRUCTION -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="privacy-number">03</div>
+            <div class="privacy-number" aria-hidden="true">03</div>
             <div class="privacy-body">
               <h3>Data Retention and Destruction</h3>
               <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Retention Period:</strong> We retain your personal information only for as long as necessary to fulfil the operational purposes outlined in this policy, or to comply with statutory financial and legal record-keeping requirements in South Africa.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Secure Destruction:</strong> Once your data is no longer required or your service contract ends, all physical documents are securely shredded, and digital records are permanently deleted using secure data-erasure methodologies.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Retention Period:</strong> We retain your personal information only for as long as necessary to fulfil the operational purposes outlined in this policy, or to comply with statutory financial and legal record-keeping requirements in South Africa.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Secure Destruction:</strong> Once your data is no longer required or your service contract ends, all physical documents are securely shredded, and digital records are permanently deleted using secure data-erasure methodologies.</li>
               </ul>
             </div>
           </div>
 
           <!-- 4. THIRD-PARTY DISCLOSURES -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="privacy-number">04</div>
+            <div class="privacy-number" aria-hidden="true">04</div>
             <div class="privacy-body">
               <h3>Third-Party Disclosures (PayFast & Google)</h3>
               <p>We will never sell, rent, or trade your personal information to third parties for marketing purposes. To execute our services efficiently, we share limited, necessary data with trusted operators:</p>
               <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill"></i> <strong>PayFast (Payment Merchant):</strong> Subscription billing details are securely transferred directly to PayFast. Modern Pressure Wash does not store or possess your full credit card numbers on our local databases; all transactions utilize secure tokenization.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Google (Intake Frameworks):</strong> Property details and assessment queries are securely captured using Google Forms and hosted within enterprise-grade secure cloud servers.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>PayFast (Payment Merchant):</strong> Subscription billing details are securely transferred directly to PayFast. Modern Pressure Wash does not store or possess your full credit card numbers on our local databases; all transactions utilize secure tokenization.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Google (Intake Frameworks):</strong> Property details and assessment queries are securely captured using Google Forms and hosted within enterprise-grade secure cloud servers.</li>
               </ul>
             </div>
           </div>
 
           <!-- 5. YOUR LAWFUL RIGHTS UNDER POPIA -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-            <div class="privacy-number">05</div>
+            <div class="privacy-number" aria-hidden="true">05</div>
             <div class="privacy-body">
               <h3>Your Lawful Rights Under POPIA</h3>
               <p>As a data subject in South Africa, you possess the right to:</p>
               <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Access:</strong> Request confirmation of whether we hold your personal information and obtain a copy of that record.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Correction:</strong> Request that we update, amend, or correct inaccurate, irrelevant, or outdated personal data.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Objection:</strong> Object to the processing of your personal information at any time for direct marketing purposes.</li>
-                <li><i class="bi bi-check-circle-fill"></i> <strong>Deletion:</strong> Request the permanent deletion or destruction of your personal profile from our communication systems.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Access:</strong> Request confirmation of whether we hold your personal information and obtain a copy of that record.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Correction:</strong> Request that we update, amend, or correct inaccurate, irrelevant, or outdated personal data.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Objection:</strong> Object to the processing of your personal information at any time for direct marketing purposes.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Deletion:</strong> Request the permanent deletion or destruction of your personal profile from our communication systems.</li>
               </ul>
             </div>
           </div>
 
           <!-- 6. SECURITY SAFEGUARDS -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <div class="privacy-number">06</div>
+            <div class="privacy-number" aria-hidden="true">06</div>
             <div class="privacy-body">
               <h3>Security Safeguards</h3>
               <p>We implement robust technical and organizational security protocols to prevent unauthorized access, loss, misuse, or alteration of your personal records. Our digital framework relies on secure cloud encryption, password-protected databases, and restricted employee data privileges.</p>
@@ -655,14 +668,14 @@ Every project concludes with a mandatory, side-by-side site inspection to guaran
 
           <!-- 7. CONTACT OUR INFORMATION OFFICER -->
           <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-            <div class="privacy-number">07</div>
+            <div class="privacy-number" aria-hidden="true">07</div>
             <div class="privacy-body">
               <h3>Contact Our Information Officer</h3>
               <p>For any questions regarding this Privacy Policy, your rights under POPIA, or to request a modification to your personal data, please contact us directly:</p>
               <ul class="privacy-list" style="margin-top: var(--space-2);">
-                <li><i class="bi bi-building"></i> <strong>Company Name:</strong> Modern Pressure Wash (A Division of Modern Renovator)</li>
-                <li><i class="bi bi-envelope"></i> <strong>Email Address:</strong> modernpressurewash@gmail.com</li>
-                <li><i class="bi bi-telephone"></i> <strong>Contact Number:</strong> 069 363 3917</li>
+                <li><i class="bi bi-building" aria-hidden="true"></i> <strong>Company Name:</strong> Modern Pressure Wash (A Division of Modern Renovator)</li>
+                <li><i class="bi bi-envelope" aria-hidden="true"></i> <strong>Email Address:</strong> modernpressurewash@gmail.com</li>
+                <li><i class="bi bi-telephone" aria-hidden="true"></i> <strong>Contact Number:</strong> 069 363 3917</li>
               </ul>
             </div>
           </div>
@@ -726,7 +739,7 @@ Every project concludes with a mandatory, side-by-side site inspection to guaran
 
   <!-- ===== BACK TO TOP BUTTON ===== -->
   <a href="#hero" class="back-to-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </a>
