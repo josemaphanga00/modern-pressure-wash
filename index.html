@@ -43,6 +43,32 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google tag (gtag.js) – GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RQ8H6MBGZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9RQ8H6MBGZ');
+  </script>
+
+  <!-- Meta Pixel Code (Facebook) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1066701205733061');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1066701205733061&ev=PageView&noscript=1"
+  /></noscript>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -110,20 +136,9 @@
         </button>
       </div>
     </div>
-
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9RQ8H6MBGZ');
-    </script>
   </header>
 
   <main id="main-content">
-
     <!-- ===== HERO ===== -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="hero-wrap">
@@ -298,7 +313,6 @@
           <p>Drag the handle on any photo. Every transformation is authentic and filmed on-site across Gauteng.</p>
         </div>
         <div class="gallery-grid">
-
           <!-- 1. Driveway -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
             <div class="reveal-layer reveal-after">
@@ -458,7 +472,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -689,7 +702,6 @@
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </section>
