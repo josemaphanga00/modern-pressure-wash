@@ -805,7 +805,7 @@ section {
 }
 
 /* ============================================================
-   TRUST BADGES (PROOF STRIP)
+   PROOF STRIP – TRUST BADGES
    ============================================================ */
 .proof-strip {
   padding: var(--space-4) 0;
@@ -813,19 +813,19 @@ section {
 }
 
 .proof-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  gap: var(--space-4);
-  text-align: center;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  max-width: 1500px !important;  /* wider container */
+  margin: 0 auto !important;
+  gap: 25rem !important;          /* larger gap, forced */
+  text-align: center !important;
 }
 
 .proof-item {
-  flex: 0 1 auto;
-  min-width: 140px;
+  flex: 0 1 auto !important;
+  min-width: 140px !important;
 }
 
 .proof-item .num {
@@ -843,6 +843,33 @@ section {
   display: block;
 }
 
+/* ============================================================
+   PROOF STRIP – MOBILE
+   ============================================================ */
+@media (max-width: 576px) {
+  .proof-grid {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    max-width: 100% !important;
+  }
+  .proof-item {
+    min-width: 100% !important;
+  }
+}
+
+/* ============================================================
+   PROOF STRIP – MOBILE
+   ============================================================ */
+@media (max-width: 576px) {
+  .proof-grid {
+    flex-direction: column;   /* stack badges vertically */
+    gap: 1.5rem;              /* spacing between stacked items */
+    max-width: 100%;
+  }
+  .proof-item {
+    min-width: 100%;
+  }
+}
 /* ============================================================
    REVEAL PANEL (Before/After) – FIXED WITH clip-path
    ============================================================ */
@@ -1584,8 +1611,8 @@ section {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  width: 44px;
-  height: 44px;
+  width: 48px;           /* was 44px – slightly bigger */
+  height: 48px;          /* was 44px */
   border-radius: 50%;
   background: var(--amber);
   color: #fff;
@@ -1597,17 +1624,49 @@ section {
   transition: transform var(--transition), background var(--transition), opacity var(--transition);
   opacity: 0.8;
   z-index: 40;
+  cursor: pointer;
 }
+
 .back-to-top:hover {
   background: var(--amber-dark);
   transform: translateY(-3px);
   opacity: 1;
 }
+
 .back-to-top svg {
   width: 24px;
   height: 24px;
   stroke: #fff;
   stroke-width: 2.5;
+}
+
+/* ============================================================
+   BACK TO TOP – MOBILE (make bigger and higher)
+   ============================================================ */
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 56px;         /* bigger for fat thumbs */
+    height: 56px;
+    bottom: 6.5rem;      /* clears the sticky CTA */
+    right: 1.5rem;
+  }
+  .back-to-top svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 52px;
+    height: 52px;
+    bottom: 6.5rem;
+    right: 1rem;
+  }
+  .back-to-top svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* ============================================================
@@ -1914,6 +1973,8 @@ section {
 }
 .founder-photo {
   animation: gentlePulse 3s ease-in-out infinite;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .sticky-mobile-cta .btn {
@@ -1941,5 +2002,67 @@ section {
   [data-aos] {
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.8rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #1F4E79;
+}
+
+/* Buttons inside the slide-out menu: hidden on desktop */
+.mobile-nav-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Hide the top-bar Privacy + Get Free Quote on mobile — they move into the menu */
+  .header-cta .btn-outline,
+  .header-cta .btn-primary {
+    display: none;
+  }
+
+  /* Show + stack them inside the slide-out nav panel instead */
+  .mobile-nav-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav-cta .btn-outline {
+    border-color: #1F4E79;
+    color: #1F4E79;
+  }
+
+  .mobile-nav-cta .btn-outline:hover {
+    background: #1F4E79;
+    color: #fff;
+  }
+
+  .mobile-nav-cta,
+  .mobile-nav-cta .btn {
+    width: 100%;
+    text-align: center;
   }
 }

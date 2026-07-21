@@ -110,6 +110,7 @@
         <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="45" height="45" />
         <span class="logo-text">Modern <span>Pressure Wash</span></span>
       </a>
+
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <button class="nav-close" id="nav-close" aria-label="Close menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -117,17 +118,24 @@
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
+
         <a href="#services">Services</a>
         <a href="#care-plans">Care Plans</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
-        <a href="#privacy">Privacy</a>
-        <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary nav-cta">Get Free Quote</a>
+
+        <!-- Buttons shown stacked inside the mobile menu only -->
+        <div class="mobile-nav-cta">
+          <a href="privacy.html" class="btn btn-outline">Privacy</a>
+          <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Get Free Quote</a>
+        </div>
       </nav>
+
       <div class="header-cta">
-        <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary desktop-only">Get Free Quote</a>
+        <a href="privacy.html" class="btn btn-outline">Privacy</a>
+        <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Get Free Quote</a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6" />
@@ -137,8 +145,7 @@
         </button>
       </div>
     </div>
-  </header>
-
+    </header>
   <main id="main-content">
 
     <!-- ===== SECTION 1: HERO ===== -->
@@ -380,10 +387,13 @@
         <div class="founder" data-aos="flip-up" data-aos-duration="700">
           <div class="founder-photo" aria-hidden="true">
             <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="72" height="72" />
+            <div>
+              <p style="font-size: 0.95rem; line-height: 1.8; color: var(--slate-grey);">Restoration Is More Than Cleaning. It's Knowing What Every Surface Needs. No two properties are the same. Natural stone requires a different approach to concrete. A tiled roof should never be treated the same way as a painted wall. Using the wrong pressure or cleaning method can do more harm than good. That's why we don't believe in one-size-fits-all solutions. Every property is carefully assessed before we begin, allowing us to choose the safest and most effective restoration method for every surface. Because protecting your property is just as important as restoring its appearance.</p>
+            </div>
           </div>
-          <div>
+          <!-- <div>
             <p style="font-size: 0.95rem; line-height: 1.8; color: var(--slate-grey);">Restoration Is More Than Cleaning. It's Knowing What Every Surface Needs. No two properties are the same. Natural stone requires a different approach to concrete. A tiled roof should never be treated the same way as a painted wall. Using the wrong pressure or cleaning method can do more harm than good. That's why we don't believe in one-size-fits-all solutions. Every property is carefully assessed before we begin, allowing us to choose the safest and most effective restoration method for every surface. Because protecting your property is just as important as restoring its appearance.</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -767,122 +777,6 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 14: PRIVACY POLICY ===== -->
-    <section id="privacy" class="bg-tint" aria-labelledby="privacy-title">
-      <div class="wrap">
-        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
-          <span class="eyebrow">Legal & Privacy</span>
-          <h2 id="privacy-title">Privacy Policy</h2>
-          <p style="font-size: 0.9rem; color: var(--slate-grey);">
-            <strong>MODERN PRESSURE WASH</strong> (A Division of Modern Renovator)<br />
-            <span style="font-size: 0.85rem;">Last Updated: June 2026</span>
-          </p>
-        </div>
-
-        <div class="privacy-content" data-aos="fade-up" data-aos-duration="800">
-          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--slate-grey); max-width: 900px; margin-bottom: var(--space-6);">
-            At Modern Pressure Wash, we respect your privacy and are committed to protecting your personal information in strict accordance with the <strong>Protection of Personal Information Act (POPIA), No. 4 of 2013</strong>, and other applicable South African data protection legislation.
-            <br /><br />
-            This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, utilize our services, or engage with our digital subscription channels.
-          </p>
-
-          <!-- 1. INFORMATION WE COLLECT -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="privacy-number" aria-hidden="true">01</div>
-            <div class="privacy-body">
-              <h3>Information We Collect</h3>
-              <p>We only collect personal information that is relevant and necessary for providing our property preservation and surface restoration services. This includes:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Identifiable Information:</strong> Name, surname, company name (if applicable), registration numbers, and job titles (for commercial entities).</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Contact Information:</strong> Email address, mobile numbers, and WhatsApp contact details.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Property Information:</strong> Physical addresses of residential properties or commercial facilities requiring assessment, layout descriptions, structural details, and property photos uploaded via our intake forms.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Technical Data:</strong> IP addresses, browser types, cookies, and usage data gathered automatically when you browse our website.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 2. HOW WE USE YOUR INFORMATION -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="privacy-number" aria-hidden="true">02</div>
-            <div class="privacy-body">
-              <h3>How We Use Your Information</h3>
-              <p>Your personal data is processed lawfully and transparently for specific business operations, including:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Formulating highly accurate, itemized project proposals and Service Level Agreements (SLAs).</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Scheduling technical teams, executing precision cleaning operations, and conducting quality sign-offs.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Processing secure monthly subscription billings through our authorized financial merchant gateway (PayFast).</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Sending automated service reminders, property updates, and before-and-after operational reports.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 3. DATA RETENTION AND DESTRUCTION -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="privacy-number" aria-hidden="true">03</div>
-            <div class="privacy-body">
-              <h3>Data Retention and Destruction</h3>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Retention Period:</strong> We retain your personal information only for as long as necessary to fulfil the operational purposes outlined in this policy, or to comply with statutory financial and legal record-keeping requirements in South Africa.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Secure Destruction:</strong> Once your data is no longer required or your service contract ends, all physical documents are securely shredded, and digital records are permanently deleted using secure data-erasure methodologies.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 4. THIRD-PARTY DISCLOSURES -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="privacy-number" aria-hidden="true">04</div>
-            <div class="privacy-body">
-              <h3>Third-Party Disclosures (PayFast & Google)</h3>
-              <p>We will never sell, rent, or trade your personal information to third parties for marketing purposes. To execute our services efficiently, we share limited, necessary data with trusted operators:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>PayFast (Payment Merchant):</strong> Subscription billing details are securely transferred directly to PayFast. Modern Pressure Wash does not store or possess your full credit card numbers on our local databases; all transactions utilize secure tokenization.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Google (Intake Frameworks):</strong> Property details and assessment queries are securely captured using Google Forms and hosted within enterprise-grade secure cloud servers.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 5. YOUR LAWFUL RIGHTS UNDER POPIA -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-            <div class="privacy-number" aria-hidden="true">05</div>
-            <div class="privacy-body">
-              <h3>Your Lawful Rights Under POPIA</h3>
-              <p>As a data subject in South Africa, you possess the right to:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Access:</strong> Request confirmation of whether we hold your personal information and obtain a copy of that record.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Correction:</strong> Request that we update, amend, or correct inaccurate, irrelevant, or outdated personal data.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Objection:</strong> Object to the processing of your personal information at any time for direct marketing purposes.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Deletion:</strong> Request the permanent deletion or destruction of your personal profile from our communication systems.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 6. SECURITY SAFEGUARDS -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <div class="privacy-number" aria-hidden="true">06</div>
-            <div class="privacy-body">
-              <h3>Security Safeguards</h3>
-              <p>We implement robust technical and organizational security protocols to prevent unauthorized access, loss, misuse, or alteration of your personal records. Our digital framework relies on secure cloud encryption, password-protected databases, and restricted employee data privileges.</p>
-            </div>
-          </div>
-
-          <!-- 7. CONTACT OUR INFORMATION OFFICER -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-            <div class="privacy-number" aria-hidden="true">07</div>
-            <div class="privacy-body">
-              <h3>Contact Our Information Officer</h3>
-              <p>For any questions regarding this Privacy Policy, your rights under POPIA, or to request a modification to your personal data, please contact us directly:</p>
-              <ul class="privacy-list" style="margin-top: var(--space-2);">
-                <li><i class="bi bi-building" aria-hidden="true"></i> <strong>Company Name:</strong> Modern Pressure Wash (A Division of Modern Renovator)</li>
-                <li><i class="bi bi-envelope" aria-hidden="true"></i> <strong>Email Address:</strong> modernpressurewash@gmail.com</li>
-                <li><i class="bi bi-telephone" aria-hidden="true"></i> <strong>Contact Number:</strong> 069 363 3917</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ===== FOOTER ===== -->
@@ -914,7 +808,7 @@
     </div>
     <div class="wrap legal-bar">
       <span>© 2026 Modern Pressure Wash. All rights reserved.</span>
-      <span><a href="#privacy">Privacy</a> · <a href="#">Terms</a></span>
+      <span><a href="privacy.html">Privacy</a> · <a href="#">Terms</a></span>
     </div>
   </footer>
 
