@@ -1317,6 +1317,60 @@ section {
 }
 
 /* ============================================================
+   REVIEWS CTA BUTTON
+   ============================================================ */
+.btn-reviews {
+  background: var(--amber) !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 0.75rem 2rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-btn) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 48px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.btn-reviews:hover {
+  background: var(--amber-dark) !important;
+  transform: scale(1.03) !important;
+  box-shadow: var(--shadow-lift) !important;
+  color: #fff !important;
+}
+
+.btn-reviews:active {
+  transform: scale(0.97) !important;
+}
+
+/* ============================================================
+   REVIEWS CTA – RESPONSIVE
+   ============================================================ */
+@media (max-width: 576px) {
+  .btn-reviews {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.8rem !important;
+    min-height: 44px !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn-reviews {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.75rem !important;
+    min-height: 40px !important;
+  }
+}
+
+
+/* ============================================================
    FAQ
    ============================================================ */
 .faq-grid {
