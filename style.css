@@ -436,6 +436,36 @@ section {
   margin-bottom: var(--space-1);
 }
 
+/* ============================================================
+   HERO – SUB-HEADLINE
+   ============================================================ */
+.sub-headline {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--slate-grey);
+  margin-top: -0.5rem;
+  margin-bottom: var(--space-3);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   SUB-HEADLINE – RESPONSIVE
+   ============================================================ */
+@media (max-width: 576px) {
+  .sub-headline {
+    font-size: 1.1rem;
+    margin-top: -0.2rem;
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 400px) {
+  .sub-headline {
+    font-size: 1rem;
+    margin-top: -0.1rem;
+  }
+}
+
 .price-chip {
   display: inline-flex;
   align-items: center;
