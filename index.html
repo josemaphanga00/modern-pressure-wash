@@ -97,7 +97,7 @@
 </head>
 <body>
 
-  <!-- ===== SKIP LINK (for keyboard users) ===== -->
+  <!-- ===== SKIP LINK ===== -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ===== OVERLAY ===== -->
@@ -110,6 +110,7 @@
         <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="45" height="45" />
         <span class="logo-text">Modern <span>Pressure Wash</span></span>
       </a>
+
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <button class="nav-close" id="nav-close" aria-label="Close menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -117,16 +118,24 @@
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
+
         <a href="#services">Services</a>
-        <a href="#plans">Maintenance</a>
+        <a href="#care-plans">Care Plans</a>
         <a href="#gallery">Gallery</a>
-        <a href="#why-us">About</a>
+        <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
-        <a href="#privacy">Privacy Policy</a>
-        <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary nav-cta">Get Free Quote</a>
+        <a href="#faq">FAQ</a>
+
+        <!-- Buttons shown stacked inside the mobile menu only -->
+        <div class="mobile-nav-cta">
+          <a href="privacy.html" class="btn btn-outline">Privacy</a>
+          <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Get Free Quote</a>
+        </div>
       </nav>
+
       <div class="header-cta">
-        <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary desktop-only">Get Free Quote</a>
+        <a href="privacy.html" class="btn btn-outline">Privacy</a>
+        <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Get Free Quote</a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6" />
@@ -136,24 +145,23 @@
         </button>
       </div>
     </div>
-  </header>
-
+    </header>
   <main id="main-content">
-    <!-- ===== HERO ===== -->
+
+    <!-- ===== SECTION 1: HERO ===== -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="hero-wrap">
         <div class="hero-grid">
           <div class="hero-copy" data-aos="fade-right" data-aos-duration="800">
-            <h1 id="hero-title">High-Performance Surface Restoration</h1>
-            <p class="sub">We restore and protect residential estates, commercial facilities, and high-value infrastructure across Gauteng. Utilizing specialized pressure washing and soft-washing systems, we eliminate deep-seated grime, moss, and atmospheric pollution without risking structural damage.</p>
+            <h1 id="hero-title">Life Feels Better When Your Property Looks Its Best</h1>
+            <p class="sub">Your property tells a story before anyone steps through the front door. Over time, dirt, algae and weathering quietly steal the beauty of your driveway, roof and outdoor spaces – making even a well-loved home look neglected.</p>
+            <p class="sub">At Modern Pressure Wash, we carefully restore the beauty of your property using professional pressure washing and soft washing techniques tailored to each surface. The result is more than a cleaner home. It's the satisfaction of coming home to a property that looks cared for, feels welcoming and reflects the pride you've invested in it.</p>
             <div class="cta-row">
               <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Request A Quote</a>
-              <a href="#plans" class="btn btn-whatsapp">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.3 14.9 3.8 13.5 3.8 12c0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/></svg>
-                View Our Plans
-              </a>
+              <a href="#gallery" class="btn btn-whatsapp">View Our Transformations</a>
             </div>
-            <div class="rating-chip">
+            <p style="text-align: center; font-weight: 700; font-style: italic; font-size: 1.4rem; color: var(--navy); margin-top: var(--space-4);">We don't just restore properties. We restore the pride of owning them.</p>
+            <div class="rating-chip" style="justify-content: center;">
               <span class="stars" aria-hidden="true">★★★★★</span>
               <a href="https://maps.app.goo.gl/tsj6Wm4xaaS5MgHDA" target="_blank">5 on Google — see reviews</a>
             </div>
@@ -182,22 +190,107 @@
       </div>
     </section>
 
-    <!-- ===== PROOF STRIP ===== -->
+    <!-- ===== TRUST BADGES ===== -->
     <div class="proof-strip" aria-label="Trust indicators">
       <div class="wrap proof-grid">
-        <div class="proof-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><span class="num">247</span><span class="label">jobs completed</span></div>
-        <div class="proof-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><span class="num">★ 5</span><span class="label"><a href="https://maps.app.goo.gl/tsj6Wm4xaaS5MgHDA" target="_blank">10+ reviews</a></span></div>
-        <div class="proof-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><span class="num">7-day</span><span class="label">same-week booking</span></div>
+        <div class="proof-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+          <span class="num">✓</span>
+          <span class="label">Tailored Restoration Plans</span>
+        </div>
+        <div class="proof-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <span class="num">✓</span>
+          <span class="label">Safe Cleaning Methods</span>
+        </div>
+        <div class="proof-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <span class="num">✓</span>
+          <span class="label">Trusted by Homeowners Across Gauteng</span>
+        </div>
       </div>
     </div>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" aria-labelledby="services-title">
+    <!-- ===== SECTION 2: THE PROBLEM ===== -->
+    <section id="problem" aria-labelledby="problem-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">The Reality</span>
+          <h2 id="problem-title">Does Your Property Still Reflect the Pride You Have in It?</h2>
+        </div>
+        <div class="problem-content" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: 0 auto; color: var(--slate-grey); text-align: center;">
+            Your home is one of your biggest investments. But over time, dirt, algae, and weather gradually hide the beauty that made it feel special. You begin noticing stained paving. Dark streaks on the roof. Slippery walkways. Patios you no longer enjoy. The change happens so slowly that it's easy to accept it as normal. It doesn't have to stay that way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: THE PROMISE ===== -->
+    <section id="promise" class="bg-tint" aria-labelledby="promise-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">The Promise</span>
+          <h2 id="promise-title">Imagine Looking Forward to Coming Home Again</h2>
+        </div>
+        <div class="promise-content" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 700px; margin: 0 auto; color: var(--slate-grey); text-align: center;">
+            Imagine pulling into your driveway and seeing a property that looks clean, well-cared for and welcoming. Imagine hosting family without noticing stained paving. Imagine knowing your home reflects the pride you've invested in it. That's the transformation we deliver. A renewed sense of pride in the place you call home.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: THE PROCESS ===== -->
+    <section id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">Our Approach</span>
+          <h2 id="process-title">How We Restore Your Property</h2>
+        </div>
+        <div class="process-intro" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 750px; margin: 0 auto var(--space-5) auto; color: var(--slate-grey); text-align: center;">
+            Every property is different. Different materials. Different levels of exposure. Different restoration requirements. That's why every project begins with understanding your property before selecting the safest and most effective restoration method. Whether it's restoring your driveway, revitalising your roof or bringing new life to your outdoor entertaining areas, our goal is always the same: To help you enjoy your property again.
+          </p>
+        </div>
+        <!-- Reuse existing process steps (4-step) but with new text if needed – we'll keep the 4-step structure -->
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+            <div class="step-circle" aria-hidden="true">01</div>
+            <div class="step-content">
+              <h3>Understanding Your Property</h3>
+              <p>We assess your property's materials, current condition and specific restoration needs.</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="step-circle" aria-hidden="true">02</div>
+            <div class="step-content">
+              <h3>Selecting the Right Method</h3>
+              <p>Every surface is different. We choose the safest and most effective restoration technique.</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="step-circle" aria-hidden="true">03</div>
+            <div class="step-content">
+              <h3>Careful Execution</h3>
+              <p>We restore with precision, protecting your property and surrounding areas throughout the process.</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div class="step-circle" aria-hidden="true">04</div>
+            <div class="step-content">
+              <h3>Enjoy the Results</h3>
+              <p>Walk through the transformation with us and feel the pride of a beautifully restored property.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: SERVICES ===== -->
+    <section id="services" class="bg-tint" aria-labelledby="services-title">
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
           <span class="eyebrow">What We Do</span>
-          <h2 id="services-title">Specialized Surface Restoration</h2>
-          <p>We engineer specific pressure and chemical ratios tailored to your property's masonry, roofing, and structural layout.</p>
+          <h2 id="services-title">OUR SERVICES</h2>
+          <p>Professional restoration for every surface of your property.</p>
         </div>
 
         <div class="services-grid">
@@ -205,44 +298,113 @@
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
             <div class="icon-badge"><i class="bi bi-car-front" aria-hidden="true"></i></div>
             <h3>Driveway Restoration</h3>
-            <p>Vehicular traffic quickly tracks oil, tire marks, and deep-seated grime into porous paving and concrete. Utilizing precision pressure systems, we extract embedded pollutants and tough stains – safely restoring immaculate curb appeal while preventing the long-term degradation of your stone surfaces.</p>
+            <p><strong>The First Impression of Your Home Starts Here</strong></p>
+            <p>Your driveway is one of the first things you, your family and your guests notice. Over time, oil stains, tyre marks, dirt and algae slowly take away its appearance. We carefully restore concrete, brick and paved driveways, revealing the clean, welcoming entrance your home deserves.</p>
+            <p style="font-weight: 600; margin-top: var(--space-2); color: var(--navy);">Ideal for:</p>
+            <ul style="list-style: none; padding-left: 0; font-size: 0.875rem; color: var(--slate-grey);">
+              <li>• Brick paving</li>
+              <li>• Concrete driveways</li>
+              <li>• Estate entrances</li>
+              <li>• Walkways</li>
+            </ul>
           </div>
 
-          <!-- 2. Paving Restoration -->
+          <!-- 2. Roof Restoration -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="icon-badge"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></div>
-            <h3>Paving Restoration</h3>
-            <p>South Africa's intense summer heat and heavy downpours create the perfect breeding ground for deep-seated grime, stubborn moss, and unsightly black algae on porous paving that a standard hose pipe can't touch. Our specialized deep-clean systems penetrate deep into the paver's surface, extracting embedded pollutants and eliminating slick moss at the root – instantly restoring your driveway or entertainment patio to its original, pristine look.</p>
-          </div>
-
-          <!-- 3. Low-Pressure Roof Washing -->
-          <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <div class="icon-badge"><i class="bi bi-house" aria-hidden="true"></i></div>
-            <h3>Low-Pressure Roof Washing</h3>
-            <p>High pressure can permanently destroy roof tiles and exterior plaster coatings. We utilize specialized soft-wash chemical systems to safely kill algae, mould, and moss at the root, preserving your structural integrity and extending your paintwork's lifespan.</p>
+            <h3>Roof Restoration</h3>
+            <p><strong>Restore the Beauty Above Everything Else</strong></p>
+            <p>Your roof protects your home every day. It also plays one of the biggest roles in how your property looks. Using carefully selected soft washing techniques where appropriate, we remove algae, mould and organic staining while helping restore your roof's original appearance. A cleaner roof doesn't just improve curb appeal – it helps your entire property feel cared for again.</p>
           </div>
 
-          <!-- 4. Commercial & HOA Facility Maintenance -->
+          <!-- 3. Paving, Patio & Entertainment Area Restoration -->
+          <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div class="icon-badge"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></div>
+            <h3>Paving, Patio & Entertainment Area Restoration</h3>
+            <p><strong>Enjoy Every Moment Outdoors Again</strong></p>
+            <p>Outdoor spaces are made for relaxing, entertaining and spending time with the people who matter most. When paving becomes stained and slippery, those spaces become less inviting. We restore patios, pool surrounds and entertainment areas so they're clean, welcoming and ready to be enjoyed again.</p>
+          </div>
+
+          <!-- 4. Wall Restoration -->
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <div class="icon-badge"><i class="bi bi-building" aria-hidden="true"></i></div>
-            <h3>Commercial & HOA Facility Maintenance</h3>
-            <p>High-traffic commercial properties demand consistent safety and cleanliness compliance. We provide scheduled, recurring maintenance programs for retail strips, office parks, and residential estates – focusing on dumpster pads, drive-thrus, parking structures, and boundary walls.</p>
+            <h3>Wall Restoration</h3>
+            <p><strong>Bring Back a Fresh, Well-Cared-For Appearance</strong></p>
+            <p>Exterior walls are constantly exposed to rain, dust and pollution. Over time, staining gradually dulls the appearance of your property. We carefully restore rendered walls, boundary walls and exterior surfaces to help your entire home look brighter and better maintained.</p>
+          </div>
+
+          <!-- 5. Commercial Property Restoration -->
+          <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+            <div class="icon-badge"><i class="bi bi-shop" aria-hidden="true"></i></div>
+            <h3>Commercial Property Restoration</h3>
+            <p><strong>Every Great Business Makes a Great First Impression</strong></p>
+            <p>Your premises tell customers what to expect before they walk through the door. Clean walkways, entrances and exterior surfaces communicate professionalism, attention to detail and pride in your business. We help commercial properties create welcoming environments that leave lasting first impressions.</p>
+          </div>
+
+          <!-- 6. SOFT WASHING -->
+          <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+            <div class="icon-badge"><i class="bi bi-droplet" aria-hidden="true"></i></div>
+            <h3>SOFT WASHING</h3>
+            <p><strong>Some Surfaces Need Care, Not Pressure</strong></p>
+            <p>Not every surface should be cleaned with high pressure. For delicate materials, we use carefully selected soft washing techniques that safely remove algae, mould and organic growth while protecting the surface underneath. Choosing the right method isn't just about achieving better results. It's about protecting your investment.</p>
           </div>
         </div>
 
+        <!-- Gallery preview (section 5 sub-section) -->
         <div class="services-cta" data-aos="fade-up" data-aos-duration="600">
-          <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Unsure of your needs? Let's figure it out</a>
+          <p style="font-size: 1.05rem; font-weight: 600; color: var(--navy);">Imagine What Your Property Could Look Like</p>
+          <p style="color: var(--slate-grey); max-width: 600px; margin: 0 auto var(--space-4);">Every property we restore has something in common. It didn't need replacing. It simply needed the right care.</p>
+          <a href="#gallery" class="btn btn-primary">View Our Transformation Gallery</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== MAINTENANCE PLANS ===== -->
-    <section id="plans" aria-labelledby="plans-title">
+    <!-- ===== SECTION 6: WHY HOMEOWNERS TRUST US ===== -->
+    <section id="why-us" aria-labelledby="why-title">
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
-          <span class="eyebrow">Recurring Care</span>
-          <h2 id="plans-title">Maintenance Plans That Keep Your Property Spotless</h2>
-          <p>Never allow deep-seated grime, slippery algae, or destructive moss to compromise your property again. Our scheduled care plans keep your estate, townhouse complex, or commercial facility immaculate year-round under a predictable, flat monthly investment.</p>
+          <span class="eyebrow">Why Choose Us</span>
+          <h2 id="why-title">Why Homeowners Trust Us</h2>
+        </div>
+        <div class="diff-grid">
+          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+            <h3>We Respect Your Property</h3>
+            <p>We treat every home with the same care and attention we'd expect for our own.</p>
+          </div>
+          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <h3>We Never Rush Quality</h3>
+            <p>Every surface is assessed before we begin so we use the safest and most effective cleaning method.</p>
+          </div>
+          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <h3>Clear Communication</h3>
+            <p>From your first quote to the final walkthrough, you'll always know what to expect.</p>
+          </div>
+          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <h3>Results That Last</h3>
+            <p>We don't just clean for today – we help you keep your property looking its best for longer.</p>
+          </div>
+        </div>
+        <div class="founder" data-aos="flip-up" data-aos-duration="700">
+          <div class="founder-photo" aria-hidden="true">
+            <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="72" height="72" />
+            <div>
+              <p style="font-size: 0.95rem; line-height: 1.8; color: var(--slate-grey);">Restoration Is More Than Cleaning. It's Knowing What Every Surface Needs. No two properties are the same. Natural stone requires a different approach to concrete. A tiled roof should never be treated the same way as a painted wall. Using the wrong pressure or cleaning method can do more harm than good. That's why we don't believe in one-size-fits-all solutions. Every property is carefully assessed before we begin, allowing us to choose the safest and most effective restoration method for every surface. Because protecting your property is just as important as restoring its appearance.</p>
+            </div>
+          </div>
+          <!-- <div>
+            <p style="font-size: 0.95rem; line-height: 1.8; color: var(--slate-grey);">Restoration Is More Than Cleaning. It's Knowing What Every Surface Needs. No two properties are the same. Natural stone requires a different approach to concrete. A tiled roof should never be treated the same way as a painted wall. Using the wrong pressure or cleaning method can do more harm than good. That's why we don't believe in one-size-fits-all solutions. Every property is carefully assessed before we begin, allowing us to choose the safest and most effective restoration method for every surface. Because protecting your property is just as important as restoring its appearance.</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: PROPERTY CARE PLANS ===== -->
+    <section id="care-plans" class="bg-tint" aria-labelledby="plans-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">Care Plans</span>
+          <h2 id="plans-title">PROPERTY CARE PLANS</h2>
+          <p>Choose the Level of Care That Fits Your Home</p>
         </div>
         <div class="row g-4 mt-3 justify-content-center">
           <!-- Silver -->
@@ -251,12 +413,13 @@
               <div class="plan-badge">Starter Value</div>
               <div class="plan-header">
                 <h3>Silver Care</h3>
-                <p class="plan-sub">Serviced Every 6 Months</p>
+                <p class="plan-sub">Perfect for homeowners who want their property professionally maintained throughout the year.</p>
               </div>
               <ul class="plan-features">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Moderate-traffic residential homes and properties looking to keep winter grime and seasonal moss at bay.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Full structural facade soft-wash, comprehensive driveway deep-clean, and main external gutter clearing.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Protects your paintwork and prevents long-term masonry staining before it sets in.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Scheduled restoration visits</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Priority booking</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Reduced restoration costs</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Reminder before every visit</li>
               </ul>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc85iJdZs2S5slCPJevNg05U0ZQ59esjcHS15aGBW4bk8s-Ow/viewform" target="_blank" class="btn btn-primary w-100">Choose Silver</a>
             </div>
@@ -267,12 +430,14 @@
               <div class="plan-badge">Most Popular</div>
               <div class="plan-header">
                 <h3>Gold Care</h3>
-                <p class="plan-sub">Serviced Every 3 Months</p>
+                <p class="plan-sub">Our most popular choice for homeowners who want their property looking consistently beautiful with less effort.</p>
               </div>
               <ul class="plan-features">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> High-value residential estates, busy commercial entrances, and properties with heavy tree cover or high foot traffic.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Everything in Silver Care, plus a full perimeter boundary wall wash, outdoor entertainment patios, and immediate high-traffic walkway stain removal.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Complete, proactive asset protection. Your property remains consistently pristine without ever reaching a visibly soiled state.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Everything in Silver, plus:</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> More frequent visits</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Seasonal maintenance</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Preferred scheduling</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Ongoing property condition monitoring</li>
               </ul>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc85iJdZs2S5slCPJevNg05U0ZQ59esjcHS15aGBW4bk8s-Ow/viewform" target="_blank" class="btn btn-primary w-100">Choose Gold</a>
             </div>
@@ -283,36 +448,44 @@
               <div class="plan-badge">Premium</div>
               <div class="plan-header">
                 <h3>Platinum Care</h3>
-                <p class="plan-sub">Serviced Every 2 Months</p>
+                <p class="plan-sub">Complete peace of mind. Our most comprehensive care plan keeps your property looking exceptional throughout the year.</p>
               </div>
               <ul class="plan-features">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Premium commercial facilities, drive-thrus, high-frequency retail strips, and restaurant dumpster zones.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Intensive surface degreasing, constant oil and chewing gum removal, public health sanitation compliance, and comprehensive structural washing.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Ultimate liability reduction. Completely eliminates slip-and-fall hazards caused by oily or algae-slick walkways and keeps corporate properties looking flawless to customers.</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Everything in Gold, plus:</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Highest visit frequency</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Priority scheduling</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Annual property care review</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Exclusive member benefits</li>
               </ul>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc85iJdZs2S5slCPJevNg05U0ZQ59esjcHS15aGBW4bk8s-Ow/viewform" target="_blank" class="btn btn-primary w-100">Choose Platinum</a>
             </div>
           </div>
         </div>
         <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="600">
-          <p class="text-muted" style="font-size: 1rem; line-height: 1.8;">
+          <p class="text-muted" style="font-size: 0.95rem; line-height: 1.8;">
             <i class="bi bi-info-circle me-2" style="color: var(--amber); font-size: 1.2rem;" aria-hidden="true"></i>
-            <strong style="font-weight: 800; font-size: 1.05rem;">Important Note:</strong>
-            <span style="font-weight: 500;">All care plans are calculated based on your specific property layout and square meter volume; to ensure the highest standard of restoration, properties requiring heavy initial deep-cleans may be subject to an upfront baseline treatment fee before the monthly subscription cycle begins.</span>
+            <strong style="font-weight: 800; font-size: 1.05rem;">Note:</strong>
+            <span style="font-weight: 500;">All care plans are tailored to your property's specific needs. For properties requiring heavy initial deep-cleans, an upfront baseline treatment may be required before the monthly plan begins.</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ===== GALLERY ===== -->
-    <section id="gallery" class="bg-tint" aria-labelledby="gallery-title">
+    <!-- ===== SECTION 8: TRANSFORMATION GALLERY ===== -->
+    <section id="gallery" aria-labelledby="gallery-title">
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
           <span class="eyebrow">Our Work</span>
-          <h2 id="gallery-title">Real Transformation. Real Results.</h2>
-          <p>Drag the handle on any photo. Every transformation is authentic and filmed on-site across Gauteng.</p>
+          <h2 id="gallery-title">TRANSFORMATION GALLERY</h2>
+          <p>See the Difference Restoration Can Make</p>
+        </div>
+        <div class="gallery-intro" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: 0 auto var(--space-6) auto; color: var(--slate-grey); text-align: center;">
+            Every property has a story. Some had driveways hidden beneath years of dirt and algae. Others paving that had gradually lost their appearance to weather and organic growth. None of these homeowners wanted a "pressure wash." They simply wanted to enjoy looking at their property again. Explore some of the transformations we've proudly completed across Gauteng.
+          </p>
         </div>
         <div class="gallery-grid">
+          <!-- Your existing 8 sliders go here – I'll keep them as is but with a brief note -->
           <!-- 1. Driveway -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after driveway restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
             <div class="reveal-layer reveal-after">
@@ -332,7 +505,6 @@
               </div>
             </div>
           </div>
-
           <!-- 2. Roof -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after roof restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
             <div class="reveal-layer reveal-after">
@@ -352,7 +524,6 @@
               </div>
             </div>
           </div>
-
           <!-- 3. Patio -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after patio restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
             <div class="reveal-layer reveal-after">
@@ -372,7 +543,6 @@
               </div>
             </div>
           </div>
-
           <!-- 4. Gutter -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after gutter restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
             <div class="reveal-layer reveal-after">
@@ -392,7 +562,6 @@
               </div>
             </div>
           </div>
-
           <!-- 5. Facade / Wall -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after facade restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
             <div class="reveal-layer reveal-after">
@@ -412,7 +581,6 @@
               </div>
             </div>
           </div>
-
           <!-- 6. Commercial Entrance -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after commercial entrance restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
             <div class="reveal-layer reveal-after">
@@ -432,7 +600,6 @@
               </div>
             </div>
           </div>
-
           <!-- 7. Pool / Deck Area -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after pool deck restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
             <div class="reveal-layer reveal-after">
@@ -452,7 +619,6 @@
               </div>
             </div>
           </div>
-
           <!-- 8. Walkway / Pathway -->
           <div class="reveal-panel" data-reveal="50" role="slider" aria-label="Before and after walkway restoration" aria-labelledby="gallery-title" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" tabindex="0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700">
             <div class="reveal-layer reveal-after">
@@ -473,93 +639,31 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ===== PROCESS ===== -->
-    <section id="process" aria-labelledby="process-title">
-      <div class="wrap">
-        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
-          <span class="eyebrow">How It Works</span>
-          <h2 id="process-title">Our Engineered 4-Step Execution Process</h2>
-        </div>
-        <div class="process-steps">
-          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="step-circle" aria-hidden="true">01</div>
-            <div class="step-content">
-              <h3>Digital Layout Assessment</h3>
-              <p>Send us your location or property photos. Our team analyses your total square meter volume and structural layouts to map out a highly accurate, custom project plan.</p>
-            </div>
-          </div>
-          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="step-circle" aria-hidden="true">02</div>
-            <div class="step-content">
-              <h3>Custom Engineering Scope</h3>
-              <p>We compile a professional, itemized proposal detailing the exact cleaning methodologies, chemical safety requirements, and target timelines required for your project.</p>
-            </div>
-          </div>
-          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="step-circle" aria-hidden="true">03</div>
-            <div class="step-content">
-              <h3>Precision Cleaning Operations</h3>
-              <p>Our skilled technical teams arrive on-site with advanced equipment, carefully managing water flow, environmental protection, and surface precision without disrupting your day.</p>
-            </div>
-          </div>
-          <div class="process-step" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="step-circle" aria-hidden="true">04</div>
-            <div class="step-content">
-              <h3>Quality Sign-Off</h3>
-              <p>We perform a meticulous walk-through of the restored surfaces alongside your team to ensure every single square meter meets our premium company standards.</p>
-            </div>
-          </div>
+        <!-- IMAGINE YOUR PROPERTY NEXT -->
+        <div class="gallery-cta" data-aos="fade-up" data-aos-duration="600">
+          <p style="font-size: 1.2rem; font-weight: 700; color: var(--navy);">IMAGINE YOUR PROPERTY NEXT</p>
+          <p style="color: var(--slate-grey); max-width: 600px; margin: 0 auto var(--space-4);">Your Home Could Be Our Next Transformation. The beautiful properties you've just seen weren't built yesterday. They've simply been cared for. With the right restoration techniques, many outdoor surfaces can regain the clean, welcoming appearance that time has gradually hidden. Imagine what your property could look like.</p>
+          <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary">Let's Talk About Your Property</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== WHY US ===== -->
-    <section id="why-us" class="bg-tint" aria-labelledby="why-title">
-      <div class="wrap">
-        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
-          <span class="eyebrow">Why Choose Us</span>
-          <h2 id="why-title">Why Modern Pressure Wash Outperforms the Market</h2>
-        </div>
-        <div class="diff-grid">
-          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <h3>100% Quality Sign-Off</h3>
-            <p>We don't pack until you are satisfied. Every project concludes with a mandatory, side-by-side site inspection to guarantee our restoration meets your strict standards before final invoicing.</p>
-          </div>
-          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <h3>Transparent, Expert Pricing</h3>
-            <p>No Call Centres. No Guesswork. Every project is assessed by an experienced technician to provide accurate, honest, itemized pricing with zero hidden fees.</p>
-          </div>
-          <div class="diff-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <h3>Low-Pressure Soft-Wash Technology</h3>
-            <p>We completely eliminate high-pressure blasting, utilising specialised, eco-safe chemical treatments that eradicate moss and algae at the root without compromising the structural integrity or seal of your roof tiles.</p>
-          </div>
-        </div>
-        <div class="founder" data-aos="flip-up" data-aos-duration="700">
-          <div class="founder-photo" aria-hidden="true">
-            <img src="Website Logo.png" alt="Modern Pressure Wash Logo" class="logo-img" loading="lazy" width="72" height="72" />
-          </div>
-          <div>
-            <h3>The Modern Standard</h3>
-            <p>
-              Modern Pressure Wash was established to bridge the gap between informal exterior cleaning and true corporate facility asset management. We recognized that property owners were constantly frustrated by unreliable contractors who used aggressive, damaging water pressure and lacked structural knowledge. We approach pressure washing as an engineering task, not just a cleaning chore. By calculating the exact thermal, chemical, and pressure requirements for every unique material – from sensitive clay bricks to durable concrete panels – we maximize restoration results while guaranteeing the absolute safety of your property. We don't just clear dirt; we protect your long-term real estate investments.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== REVIEWS ===== -->
-    <section id="reviews" aria-labelledby="reviews-title">
+    <!-- ===== SECTION 9: REVIEWS ===== -->
+    <section id="reviews" class="bg-tint" aria-labelledby="reviews-title">
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
           <span class="eyebrow">Reviews</span>
-          <h2 id="reviews-title">What Gauteng Homeowners Say</h2>
+          <h2 id="reviews-title">What Homeowners Are Saying</h2>
           <p>★ 5/5 from 10+ Google reviews</p>
         </div>
+        <div class="reviews-intro" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 700px; margin: 0 auto var(--space-5) auto; color: var(--slate-grey); text-align: center;">
+            The greatest compliment we receive isn't a five-star review. It's knowing that homeowners enjoy pulling into their driveway again. Every review represents someone's trust in us – and we never take that responsibility for granted.
+          </p>
+        </div>
         <div class="reviews-grid">
+          <!-- Existing review cards -->
           <article class="review-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
             <div class="stars" aria-hidden="true">★★★★★</div>
             <p>"Israel comes highly recommended, we are very happy with his service, good value for money, excellent job, thank you."</p>
@@ -586,141 +690,89 @@
           </article>
         </div>
         <div class="reviews-cta" data-aos="fade-up" data-aos-duration="600">
-          <a href="https://maps.app.goo.gl/tsj6Wm4xaaS5MgHDA" target="_blank" class="btn btn-outline" role="button">Read All 10+ Reviews</a>
+          <a href="https://maps.app.goo.gl/tsj6Wm4xaaS5MgHDA" target="_blank" class="btn btn-reviews" role="button">Read All 10+ Reviews</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== PRIVACY POLICY SECTION ===== -->
-    <section id="privacy" class="bg-tint" aria-labelledby="privacy-title">
+    <!-- ===== SECTION 10: OUR PROMISE ===== -->
+    <section id="promise-section" aria-labelledby="promise-section-title">
       <div class="wrap">
         <div class="section-head" data-aos="fade-up" data-aos-duration="700">
-          <span class="eyebrow">Legal & Privacy</span>
-          <h2 id="privacy-title">Privacy Policy</h2>
-          <p style="font-size: 0.9rem; color: var(--slate-grey);">
-            <strong>MODERN PRESSURE WASH</strong> (A Division of Modern Renovator)<br />
-            <span style="font-size: 0.85rem;">Last Updated: June 2026</span>
+          <span class="eyebrow">Our Commitment</span>
+          <h2 id="promise-section-title">OUR PROMISE</h2>
+        </div>
+        <div class="promise-content" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.1rem; line-height: 2; max-width: 800px; margin: 0 auto; color: var(--slate-grey); text-align: center;">
+            Every Property We Restore Is Treated Like It's Our Own. When someone invites us onto their property, they're trusting us with something they've spent years building. That's a responsibility we take seriously. From protecting surrounding landscaping to selecting the safest restoration method for every surface, every decision we make is guided by one principle: Leave the property better than we found it. Not just cleaner. Better.
           </p>
         </div>
+      </div>
+    </section>
 
-        <div class="privacy-content" data-aos="fade-up" data-aos-duration="800">
-          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--slate-grey); max-width: 900px; margin-bottom: var(--space-6);">
-            At Modern Pressure Wash, we respect your privacy and are committed to protecting your personal information in strict accordance with the <strong>Protection of Personal Information Act (POPIA), No. 4 of 2013</strong>, and other applicable South African data protection legislation.
-            <br /><br />
-            This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, utilize our services, or engage with our digital subscription channels.
+    <!-- ===== SECTION 11: ABOUT US ===== -->
+    <section id="about" class="bg-tint" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">About Us</span>
+          <h2 id="about-title">ABOUT MODERN PRESSURE WASH</h2>
+          <p>Built on Engineering Precision. Driven by Pride in Great Work.</p>
+        </div>
+        <div class="about-content" data-aos="fade-up" data-aos-duration="800">
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: 0 auto var(--space-4) auto; color: var(--slate-grey);">
+            Modern Pressure Wash was founded with a simple belief: Exceptional restoration starts with understanding – not guesswork. Our engineering background has shaped the way we approach every project. Rather than applying the same method to every surface, we carefully assess the material, the level of contamination and the most appropriate restoration technique before any work begins. It's a slower approach. A more thoughtful approach. But we believe your property deserves nothing less. Because our goal isn't simply to clean. It's to restore the beauty you've worked so hard to create.
           </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: 0 auto; color: var(--navy); font-weight: 700; text-align: center;">
+            OUR PHILOSOPHY – Why We Do What We Do
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; max-width: 800px; margin: var(--space-2) auto 0; color: var(--slate-grey);">
+            We believe beautiful properties make people feel good. A clean driveway creates a welcoming arrival. A restored patio becomes somewhere family and friends want to gather. A well-maintained home reflects years of hard work, care and pride. That's why we see every project as more than restoring surfaces. We're helping homeowners enjoy the place they call home again. Because life feels better when your property looks its best.
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <!-- 1. INFORMATION WE COLLECT -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
-            <div class="privacy-number" aria-hidden="true">01</div>
-            <div class="privacy-body">
-              <h3>Information We Collect</h3>
-              <p>We only collect personal information that is relevant and necessary for providing our property preservation and surface restoration services. This includes:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Identifiable Information:</strong> Name, surname, company name (if applicable), registration numbers, and job titles (for commercial entities).</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Contact Information:</strong> Email address, mobile numbers, and WhatsApp contact details.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Property Information:</strong> Physical addresses of residential properties or commercial facilities requiring assessment, layout descriptions, structural details, and property photos uploaded via our intake forms.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Technical Data:</strong> IP addresses, browser types, cookies, and usage data gathered automatically when you browse our website.</li>
-              </ul>
-            </div>
+    <!-- ===== SECTION 12: FAQ ===== -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head" data-aos="fade-up" data-aos-duration="700">
+          <span class="eyebrow">Help & Advice</span>
+          <h2 id="faq-title">FAQ</h2>
+        </div>
+        <div class="faq-grid" data-aos="fade-up" data-aos-duration="800">
+          <div class="faq-item" style="margin-bottom: var(--space-4); border-bottom: 1px solid rgba(11,30,62,0.06); padding-bottom: var(--space-4);">
+            <h3 style="font-size: 1.1rem; color: var(--navy);">Will pressure washing damage my surfaces?</h3>
+            <p style="color: var(--slate-grey); line-height: 1.8;">Every property is assessed before work begins. Different materials require different restoration methods, which is why we carefully choose the safest approach for every surface. Protecting your property is always our priority.</p>
           </div>
-
-          <!-- 2. HOW WE USE YOUR INFORMATION -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="privacy-number" aria-hidden="true">02</div>
-            <div class="privacy-body">
-              <h3>How We Use Your Information</h3>
-              <p>Your personal data is processed lawfully and transparently for specific business operations, including:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Formulating highly accurate, itemized project proposals and Service Level Agreements (SLAs).</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Scheduling technical teams, executing precision cleaning operations, and conducting quality sign-offs.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Processing secure monthly subscription billings through our authorized financial merchant gateway (PayFast).</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Sending automated service reminders, property updates, and before-and-after operational reports.</li>
-              </ul>
-            </div>
+          <div class="faq-item" style="margin-bottom: var(--space-4); border-bottom: 1px solid rgba(11,30,62,0.06); padding-bottom: var(--space-4);">
+            <h3 style="font-size: 1.1rem; color: var(--navy);">How long does the restoration take?</h3>
+            <p style="color: var(--slate-grey); line-height: 1.8;">Most residential projects are completed within a day, although larger or more complex properties may require additional time. We'll always discuss the expected timeframe with you before we begin.</p>
           </div>
-
-          <!-- 3. DATA RETENTION AND DESTRUCTION -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-            <div class="privacy-number" aria-hidden="true">03</div>
-            <div class="privacy-body">
-              <h3>Data Retention and Destruction</h3>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Retention Period:</strong> We retain your personal information only for as long as necessary to fulfil the operational purposes outlined in this policy, or to comply with statutory financial and legal record-keeping requirements in South Africa.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Secure Destruction:</strong> Once your data is no longer required or your service contract ends, all physical documents are securely shredded, and digital records are permanently deleted using secure data-erasure methodologies.</li>
-              </ul>
-            </div>
+          <div class="faq-item" style="margin-bottom: var(--space-4); border-bottom: 1px solid rgba(11,30,62,0.06); padding-bottom: var(--space-4);">
+            <h3 style="font-size: 1.1rem; color: var(--navy);">Do I need to be home?</h3>
+            <p style="color: var(--slate-grey); line-height: 1.8;">Not necessarily. As long as we have access to the agreed work areas and water supply, we can often complete the restoration while you're away.</p>
           </div>
-
-          <!-- 4. THIRD-PARTY DISCLOSURES -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <div class="privacy-number" aria-hidden="true">04</div>
-            <div class="privacy-body">
-              <h3>Third-Party Disclosures (PayFast & Google)</h3>
-              <p>We will never sell, rent, or trade your personal information to third parties for marketing purposes. To execute our services efficiently, we share limited, necessary data with trusted operators:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>PayFast (Payment Merchant):</strong> Subscription billing details are securely transferred directly to PayFast. Modern Pressure Wash does not store or possess your full credit card numbers on our local databases; all transactions utilize secure tokenization.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Google (Intake Frameworks):</strong> Property details and assessment queries are securely captured using Google Forms and hosted within enterprise-grade secure cloud servers.</li>
-              </ul>
-            </div>
+          <div class="faq-item" style="margin-bottom: var(--space-4); border-bottom: 1px solid rgba(11,30,62,0.06); padding-bottom: var(--space-4);">
+            <h3 style="font-size: 1.1rem; color: var(--navy);">How often should my property be restored?</h3>
+            <p style="color: var(--slate-grey); line-height: 1.8;">That depends on your property's environment, surrounding vegetation and exposure to weather. Many homeowners choose our maintenance programme to keep their property looking its best throughout the year.</p>
           </div>
-
-          <!-- 5. YOUR LAWFUL RIGHTS UNDER POPIA -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-            <div class="privacy-number" aria-hidden="true">05</div>
-            <div class="privacy-body">
-              <h3>Your Lawful Rights Under POPIA</h3>
-              <p>As a data subject in South Africa, you possess the right to:</p>
-              <ul class="privacy-list">
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Access:</strong> Request confirmation of whether we hold your personal information and obtain a copy of that record.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Correction:</strong> Request that we update, amend, or correct inaccurate, irrelevant, or outdated personal data.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Objection:</strong> Object to the processing of your personal information at any time for direct marketing purposes.</li>
-                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <strong>Deletion:</strong> Request the permanent deletion or destruction of your personal profile from our communication systems.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 6. SECURITY SAFEGUARDS -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <div class="privacy-number" aria-hidden="true">06</div>
-            <div class="privacy-body">
-              <h3>Security Safeguards</h3>
-              <p>We implement robust technical and organizational security protocols to prevent unauthorized access, loss, misuse, or alteration of your personal records. Our digital framework relies on secure cloud encryption, password-protected databases, and restricted employee data privileges.</p>
-            </div>
-          </div>
-
-          <!-- 7. CONTACT OUR INFORMATION OFFICER -->
-          <div class="privacy-block" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-            <div class="privacy-number" aria-hidden="true">07</div>
-            <div class="privacy-body">
-              <h3>Contact Our Information Officer</h3>
-              <p>For any questions regarding this Privacy Policy, your rights under POPIA, or to request a modification to your personal data, please contact us directly:</p>
-              <ul class="privacy-list" style="margin-top: var(--space-2);">
-                <li><i class="bi bi-building" aria-hidden="true"></i> <strong>Company Name:</strong> Modern Pressure Wash (A Division of Modern Renovator)</li>
-                <li><i class="bi bi-envelope" aria-hidden="true"></i> <strong>Email Address:</strong> modernpressurewash@gmail.com</li>
-                <li><i class="bi bi-telephone" aria-hidden="true"></i> <strong>Contact Number:</strong> 069 363 3917</li>
-              </ul>
-            </div>
+          <div class="faq-item" style="border-bottom: none; padding-bottom: 0;">
+            <h3 style="font-size: 1.1rem; color: var(--navy);">Do you provide free quotations?</h3>
+            <p style="color: var(--slate-grey); line-height: 1.8;">Yes. Every quotation is free, with no obligation. We'll assess your property and recommend the most appropriate restoration plan.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FINAL CTA ===== -->
+    <!-- ===== SECTION 13: FINAL CTA ===== -->
     <section id="quote" class="bg-night final-cta" aria-labelledby="cta-title">
       <div class="wrap">
-        <span class="eyebrow" data-aos="fade-up" data-aos-duration="600">Limited Slots — Book Now</span>
-        <h2 id="cta-title" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">Ready to See Your Property Transformed?</h2>
-        <p class="sub" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Get a real price in under a minute.</p>
-        <div class="hours" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Mon–Thu & Sat: 08:00–18:00 · Fri: 08:00–17:00 · Sun: Closed</div>
+        <span class="eyebrow" data-aos="fade-up" data-aos-duration="600">Get Started Today</span>
+        <h2 id="cta-title" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">Your Property Deserves to Look as Good as the Life You've Built</h2>
+        <p class="sub" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">You've invested years into creating a home you're proud of. Don't let dirt, algae and time hide its beauty. Whether it's your driveway, roof, patio or commercial property, we're here to help restore the appearance, pride and enjoyment that made your property feel special in the first place.</p>
         <div class="cta-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-          <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary" role="button">Get My Price</a>
-          <a href="tel:+27813753372" class="btn btn-outline on-dark">Call</a>
-          <a href="https://wa.link/3y4c6d" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp</a>
-        </div>
-        <div class="rating-chip" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <a href="https://maps.app.goo.gl/tsj6Wm4xaaS5MgHDA" target="_blank">5 on Google — 10+ reviews</a>
+          <a href="https://wa.link/3y4c6d" target="_blank" class="btn btn-primary" role="button">Get My Free Quote</a>
+          <a href="tel:+27813753372" class="btn btn-outline on-dark">Call Now</a>
         </div>
       </div>
     </section>
@@ -732,14 +784,21 @@
     <div class="wrap footer-grid">
       <div data-aos="fade-up" data-aos-duration="600">
         <div class="logo">Modern <span style="color:#4FB8C9;">Pressure Wash</span></div>
-        <p>Proudly serving high-value residential estates, commercial facilities, and corporate office parks across Pretoria, Johannesburg, Midrand, and the greater Gauteng region.</p>
+        <p style="font-size: 0.9rem; font-weight: 600; color: var(--white);">Restoring Beautiful Properties Across Gauteng</p>
+        <p style="font-size: 0.85rem;">Professional Property Restoration • Residential • Commercial • Estates</p>
+        <div style="display: flex; gap: var(--space-3); margin-top: var(--space-3);">
+          <a href="https://www.facebook.com/modernpressurewashing/" target="_blank" aria-label="Facebook" style="color: #8FA0A4; font-size: 1.5rem; transition: color 0.3s;"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/modernpressurewash/" target="_blank" aria-label="Instagram" style="color: #8FA0A4; font-size: 1.5rem; transition: color 0.3s;"><i class="bi bi-instagram"></i></a>
+        </div>
       </div>
       <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
         <h4>Services</h4>
         <a href="#services">Driveway Restoration</a>
-        <a href="#services">Paving Restoration</a>
-        <a href="#services">Low-Pressure Roof Washing</a>
-        <a href="#services">Commercial & HOA Facility Maintenance</a>
+        <a href="#services">Roof Restoration</a>
+        <a href="#services">Paving, Patio & Entertainment Area Restoration</a>
+        <a href="#services">Wall Restoration</a>
+        <a href="#services">Commercial Property Restoration</a>
+        <a href="#services">Soft Washing</a>
       </div>
       <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
         <h4>Contact</h4>
@@ -749,7 +808,7 @@
     </div>
     <div class="wrap legal-bar">
       <span>© 2026 Modern Pressure Wash. All rights reserved.</span>
-      <span><a href="#privacy">Privacy</a> · <a href="#">Terms</a></span>
+      <span><a href="privacy.html">Privacy</a> · <a href="#">Terms</a></span>
     </div>
   </footer>
 
