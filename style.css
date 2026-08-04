@@ -806,32 +806,76 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+/* ============================================================
+   HERO – MOBILE: 5-star reviews under image
+   ============================================================ */
+@media (max-width: 767px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column-reverse; /* Image on top, text below */
+    gap: var(--space-4);
+  }
+
+  .hero-copy {
+    padding-top: var(--space-3);
+  }
+
+  .hero .reveal-panel {
+    height: 280px;
+    min-height: 240px;
+    border-radius: 12px;
+    margin: 0;
+    box-shadow: 0 4px 20px rgba(11,30,62,0.1);
+  }
+
+  .hero .reveal-label {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    top: var(--space-2);
+  }
+
+  .hero .reveal-label.before-label {
+    left: var(--space-2);
+  }
+
+  .hero .reveal-label.after-label {
+    right: var(--space-2);
+  }
+
+  .hero .reveal-handle .grip {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero .reveal-handle .grip svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Move rating chip so it sits under the image */
+  .hero-copy .rating-chip {
+    order: -1 !important;                    /* Moves it before the text */
+    margin-bottom: var(--space-3); /* Space between reviews and text */
+    justify-content: center;
+  }
+
+  /* Ensure the slider and rating chip are grouped together */
   .hero-grid {
     display: flex;
     flex-direction: column;
   }
 
+  /* Re-order the items: image first, then rating, then text */
   .hero-grid .reveal-panel {
-    order: -1;          /* moves image to the top */
-    margin-bottom: var(--space-4);
+    order: 1;  /* Image first */
   }
 
-  .hero-grid .hero-copy {
-    order: 0;           /* text stays below image */
+  .hero-copy .rating-chip {
+    order: 2;  /* Reviews second */
   }
 
-  .hero .reveal-panel {
-    height: 280px;      /* slightly shorter on mobile */
-    min-height: 240px;
-    border-radius: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero .reveal-panel {
-    height: 220px;      /* even shorter on very small screens */
-    min-height: 200px;
+  .hero-copy {
+    order: 3;  /* Text third */
   }
 }
 
