@@ -806,6 +806,35 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-grid .reveal-panel {
+    order: -1;          /* moves image to the top */
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-grid .hero-copy {
+    order: 0;           /* text stays below image */
+  }
+
+  .hero .reveal-panel {
+    height: 280px;      /* slightly shorter on mobile */
+    min-height: 240px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .reveal-panel {
+    height: 220px;      /* even shorter on very small screens */
+    min-height: 200px;
+  }
+}
+
 /* ============================================================
    HERO – EXTRA SMALL (<= 400px)
    ============================================================ */
