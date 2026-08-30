@@ -949,7 +949,7 @@ section {
   }
 
   .proof-grid {
-    gap: 6rem !important;
+    gap: 9rem !important;
   }
 
   .proof-item {
@@ -969,6 +969,14 @@ section {
     margin-top: 0;
     font-size: 0.75rem;
   }
+
+  /* Bullet separator between items (not after the last one) */
+  .proof-item:not(:last-child)::after {
+    content: '•';
+    color: rgba(230, 126, 34, 0.6);
+    font-size: 1rem;
+    line-height: 1;
+  }
 }
 
 /* Wide desktop: even more breathing room and a slightly taller strip */
@@ -978,7 +986,7 @@ section {
   }
 
   .proof-grid {
-    gap: 10rem !important;
+    gap: 12rem !important;
   }
 }
 
@@ -1970,14 +1978,12 @@ section {
    MOBILE SPECIFIC FIXES (<= 480px)
    ============================================================ */
 @media (max-width: 480px) {
-  /* Prevent overlapping & ensure wrapping */
-  .cta-row {
-    flex-direction: column;
-  }
+  /* Side-by-side, not stacked — split the row evenly between both buttons */
   .cta-row .btn {
-    width: 100%;
-    justify-content: center;
-    flex: 1 1 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 0.75rem;
+    padding: 0.7rem 0.5rem;
   }
   .proof-grid {
     flex-direction: column;
@@ -2254,5 +2260,48 @@ section {
   .menu-toggle {
     width: 40px;
     height: 40px;
+  }
+}
+
+/* ============================================================
+   HERO CTA BUTTONS – ALWAYS SIDE BY SIDE ON MOBILE
+   ============================================================ */
+@media (max-width: 767px) {
+  .hero .cta-row {
+    flex-wrap: nowrap;
+  }
+  .hero .cta-row .btn {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--navy);
+  row-gap: 0.35rem;
+}
+.hero-tags li::after {
+  content: '•';
+  color: var(--amber);
+  margin: 0 0.55rem;
+  font-weight: 700;
+}
+.hero-tags li:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-tags {
+    font-size: 0.875rem;
   }
 }
