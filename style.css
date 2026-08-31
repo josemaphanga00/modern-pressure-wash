@@ -1673,6 +1673,25 @@ section {
   color: var(--amber);
 }
 
+.final-cta-row {
+  flex-wrap: nowrap;
+}
+.final-cta-row .btn {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 200px;
+}
+
+@media (max-width: 576px) {
+  .final-cta-row {
+    flex-wrap: wrap;
+  }
+  .final-cta-row .btn {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
+
 /* ============================================================
    STICKY MOBILE CTA
    ============================================================ */
@@ -2356,4 +2375,15 @@ section {
     margin: 0 0.45rem;
     font-weight: 700;
   }
+}
+
+.hero-copy p.sub-label {
+  margin-bottom: 0 !important;
+  margin-top: var(--space-2);
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.hero-copy .sub-label + p.sub {
+  margin-top: -0.9rem;
 }
