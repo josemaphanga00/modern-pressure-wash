@@ -2376,7 +2376,7 @@ section {
 .hero-copy p.sub-label {
   margin-bottom: 0 !important;
   margin-top: var(--space-2);
-  font-weight: 1000 !important;
+  font-weight: 800 !important;
   color: var(--navy);
 }
 
