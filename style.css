@@ -427,8 +427,9 @@ section {
   margin-bottom: var(--space-1);
 }
 
+/* ===== FIXED: Larger text, full width ===== */
 .hero-copy p.sub {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: var(--slate-grey);
   max-width: 100%;
   line-height: 1.7;
@@ -462,6 +463,23 @@ section {
   .sub-headline {
     font-size: 1rem;
     margin-top: -0.1rem;
+  }
+}
+
+/* ===== FIXED: Full width on tablet ===== */
+@media (max-width: 768px) {
+  .hero-copy p.sub {
+    font-size: 1.15rem;
+    max-width: 100%;
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* ===== FIXED: Full width on desktop ===== */
+@media (min-width: 992px) {
+  .hero-copy p.sub {
+    max-width: 100%;
+    margin-bottom: var(--space-2);
   }
 }
 
@@ -592,9 +610,10 @@ section {
     margin-bottom: var(--space-2);
   }
 
+  /* ===== FIXED: Full width, larger text ===== */
   .hero-copy p.sub {
-    font-size: 1rem;
-    max-width: 440px;
+    font-size: 1.2rem;
+    max-width: 100%;
     margin-bottom: var(--space-2);
   }
 
@@ -646,8 +665,9 @@ section {
     margin-bottom: var(--space-2);
   }
 
+  /* ===== FIXED: Full width ===== */
   .hero-copy p.sub {
-    max-width: 460px;
+    max-width: 100%;
     margin-bottom: var(--space-2);
   }
 
@@ -724,8 +744,9 @@ section {
     margin-bottom: var(--space-1);
   }
 
+  /* ===== FIXED: Slightly smaller on mobile but still readable ===== */
   .hero-copy p.sub {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     max-width: 100%;
     margin-bottom: var(--space-1);
@@ -811,7 +832,7 @@ section {
 @media (max-width: 767px) {
   .hero-grid {
     display: flex;
-    flex-direction: column-reverse; /* Image on top, text below */
+    flex-direction: column-reverse;
     gap: var(--space-4);
   }
 
@@ -851,26 +872,23 @@ section {
     height: 16px;
   }
 
-  /* Move rating chip so it sits under the image */
   .hero-copy .rating-chip {
-    order: -1;                    /* Moves it before the text */
-    margin-bottom: var(--space-3); /* Space between reviews and text */
+    order: -1;
+    margin-bottom: var(--space-3);
     justify-content: center;
   }
 
-  /* Ensure the slider and rating chip are grouped together */
   .hero-grid {
     display: flex;
     flex-direction: column;
   }
 
-  /* Re-order the top-level hero-grid children: image first, then copy block */
   .hero-grid .reveal-panel {
-    order: 1;  /* Image first */
+    order: 1;
   }
 
   .hero-copy {
-    order: 2;  /* Copy block (rating chip + headline + text) second */
+    order: 2;
   }
 }
 
@@ -887,7 +905,7 @@ section {
   }
 
   .hero-copy p.sub {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .cta-row .btn {
@@ -940,9 +958,6 @@ section {
   display: block;
 }
 
-/* Tablet AND desktop share the same generous, consistent spacing
-   from 576px up — previously tablets (576–767px) got a much smaller
-   gap (2rem) than 768px+ (8rem), which looked cramped in between. */
 @media (min-width: 576px) {
   .proof-strip {
     padding: 1.5rem 0;
@@ -970,7 +985,6 @@ section {
     font-size: 0.75rem;
   }
 
-  /* Bullet separator between items (not after the last one) */
   .proof-item:not(:last-child)::after {
     content: '•';
     color: rgba(230, 126, 34, 0.6);
@@ -979,7 +993,6 @@ section {
   }
 }
 
-/* Wide desktop: even more breathing room and a slightly taller strip */
 @media (min-width: 1100px) {
   .proof-strip {
     padding: 2rem 0 !important;
@@ -1503,7 +1516,6 @@ section {
   }
 }
 
-
 /* ============================================================
    FAQ
    ============================================================ */
@@ -1818,8 +1830,8 @@ section {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  width: 48px;           /* was 44px – slightly bigger */
-  height: 48px;          /* was 44px */
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--amber);
   color: #fff;
@@ -1852,9 +1864,9 @@ section {
    ============================================================ */
 @media (max-width: 1099px) {
   .back-to-top {
-    width: 56px;         /* bigger for fat thumbs */
+    width: 56px;
     height: 56px;
-    bottom: 6.5rem;      /* clears the sticky CTA */
+    bottom: 6.5rem;
     right: 1.5rem;
   }
   .back-to-top svg {
@@ -1897,11 +1909,6 @@ section {
   .footer-grid {
     grid-template-columns: 1.4fr 1fr 1fr;
   }
-  /* Hero layout (column → 2-col grid) is handled entirely by its own
-     dedicated breakpoints above (576/767/768/992/1200) — it switches to
-     the side-by-side grid at 768px, not here. Redeclaring it at 576px
-     used to fight with those rules and squeeze the hero on small
-     tablets / large phones. */
 }
 
 /* Desktops (>= 768px) */
@@ -1916,12 +1923,6 @@ section {
 
 /* ============================================================
    NAV SWITCH – hamburger vs. full inline nav
-   ------------------------------------------------------------
-   Deliberately NOT 768px: iPads (portrait AND landscape, across
-   all current models) land between roughly 768–1024px, and six
-   nav links + two buttons + logo do not fit inline at that width
-   — it wraps and overflows. Every tablet gets the hamburger menu;
-   only genuinely wide (laptop+) screens get the inline nav.
    ============================================================ */
 @media (min-width: 1100px) {
   body {
@@ -1997,7 +1998,6 @@ section {
    MOBILE SPECIFIC FIXES (<= 480px)
    ============================================================ */
 @media (max-width: 480px) {
-  /* Side-by-side, not stacked — split the row evenly between both buttons */
   .cta-row .btn {
     flex: 1 1 0;
     min-width: 0;
@@ -2017,8 +2017,9 @@ section {
   .hero-copy h1 {
     font-size: 1.5rem;
   }
+  /* ===== FIXED: Consistent paragraph size on small phones ===== */
   .hero-copy p.sub {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .service-card h3 {
     font-size: 1rem;
@@ -2214,13 +2215,11 @@ section {
 }
 
 @media (max-width: 1099px) {
-  /* Hide the top-bar Privacy + Get Free Quote below the nav-switch point — they move into the menu */
   .header-cta .btn-outline,
   .header-cta .btn-primary {
     display: none;
   }
 
-  /* Show + stack them inside the slide-out nav panel instead */
   .mobile-nav-cta {
     display: flex;
     flex-direction: column;
@@ -2247,9 +2246,7 @@ section {
   }
 }
 
-/* Header's own Privacy button sits on navy, so it needs the light outline variant
-   (scoped here instead of overriding .btn-outline globally, which was breaking
-   .btn-outline everywhere else it's reused, e.g. privacy.html). */
+/* Header's own Privacy button sits on navy, so it needs the light outline variant */
 .site-header .header-cta .btn-outline {
   border: 2px solid #fff;
   color: #fff;
@@ -2260,8 +2257,7 @@ section {
 }
 
 /* ============================================================
-   NAVBAR – SMALL-SCREEN SAFETY (prevents logo/hamburger from
-   ever clipping or overlapping on narrow phones)
+   NAVBAR – SMALL-SCREEN SAFETY
    ============================================================ */
 @media (max-width: 400px) {
   .header-inner {
@@ -2380,7 +2376,7 @@ section {
 .hero-copy p.sub-label {
   margin-bottom: 0 !important;
   margin-top: var(--space-2);
-  font-weight: 700;
+  font-weight: 1000 !important;
   color: var(--navy);
 }
 
