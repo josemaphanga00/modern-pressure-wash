@@ -11,7 +11,18 @@
 
   // ============================================================
   // 1. AOS (Animate On Scroll) – if available
+  //    FIX: [data-aos] elements get pointer-events:none in CSS until
+  //    AOS adds .aos-animate. If AOS never runs (Reduce Motion is on,
+  //    or the CDN script fails to load), every button/link inside a
+  //    data-aos wrapper was permanently unclickable. revealAllAos()
+  //    is the fallback that guarantees that never happens.
   // ============================================================
+  function revealAllAos() {
+    document.querySelectorAll('[data-aos]').forEach(function(el) {
+      el.classList.add('aos-animate');
+    });
+  }
+
   if (typeof AOS !== 'undefined' && !reduceMotion) {
     AOS.init({
       duration: 800,
@@ -21,7 +32,23 @@
       offset: 50,
       disable: reduceMotion
     });
+  } else {
+    // Reduce Motion is on, or AOS isn't defined yet at this point in
+    // script execution — reveal everything immediately so nothing is
+    // ever stuck non-interactive.
+    revealAllAos();
   }
+
+  // Safety net: if the AOS script itself failed to load entirely
+  // (slow/blocked CDN, ad blocker, network hiccup) typeof AOS will
+  // still be 'undefined' after load. Catch that case too.
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      if (typeof AOS === 'undefined') {
+        revealAllAos();
+      }
+    }, 1500);
+  });
 
   // ============================================================
   // 2. CACHE DOM ELEMENTS
