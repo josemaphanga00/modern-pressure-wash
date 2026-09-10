@@ -125,6 +125,90 @@
     .site-footer .legal-bar { gap: 10px; flex-wrap: wrap; }
   }
 </style>
+
+  <style>
+    /* Main navigation: grouped service-area dropdown */
+    .nav-dropdown {
+      width: 100%;
+    }
+    .nav-dropdown summary {
+      list-style: none;
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: var(--space-2) 0;
+      border-bottom: 1px solid rgba(11,30,62,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.35rem;
+    }
+    .nav-dropdown summary::-webkit-details-marker { display: none; }
+    .nav-dropdown-arrow {
+      transition: transform var(--transition);
+      font-size: 1.05rem;
+      line-height: 1;
+      display: inline-block;
+      margin-left: 0.15rem;
+    }
+    .nav-dropdown[open] .nav-dropdown-arrow { transform: rotate(180deg); }
+    .nav-dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      padding: 0.35rem 0 0.25rem 0.75rem;
+    }
+    .nav-dropdown-menu a {
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 1100px) {
+      .header-inner {
+        overflow: visible;
+      }
+      .main-nav {
+        overflow: visible;
+      }
+      .nav-dropdown {
+        position: relative;
+        width: auto;
+      }
+      .nav-dropdown summary {
+        color: rgba(255,255,255,0.8);
+        border-bottom: none;
+        padding: var(--space-1) 0;
+        font-size: 0.875rem;
+        white-space: nowrap;
+      }
+      .nav-dropdown summary:hover { color: var(--amber); }
+      .nav-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 0.55rem);
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 190px;
+        padding: 0.5rem;
+        background: var(--white);
+        border: 1px solid rgba(11,30,62,0.08);
+        border-radius: var(--radius-card);
+        box-shadow: var(--shadow-lift);
+        z-index: 999;
+      }
+      .nav-dropdown:not([open]) .nav-dropdown-menu { display: none; }
+      .main-nav .nav-dropdown-menu a {
+        color: var(--navy);
+        padding: 0.65rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+      }
+      .main-nav .nav-dropdown-menu a:hover {
+        color: var(--amber);
+        background: var(--amber-tint);
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -151,8 +235,15 @@
         </button>
 
         <a href="#services">Services</a>
-        <a href="/pressure-washing-pretoria/">Pretoria</a>
-        <a href="/pressure-washing-johannesburg/">Johannesburg</a>
+
+        <details class="nav-dropdown">
+          <summary>Service Areas <span class="nav-dropdown-arrow" aria-hidden="true">▾</span></summary>
+          <div class="nav-dropdown-menu">
+            <a href="/pressure-washing-pretoria/">Pretoria</a>
+            <a href="/pressure-washing-johannesburg/">Johannesburg</a>
+          </div>
+        </details>
+
         <a href="#care-plans">Care Plans</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
@@ -378,12 +469,7 @@
             <h3>Commercial Property Restoration</h3>
             <p><strong>Professional Premises Start with a Clean Exterior</strong></p>
             <p>Your premises communicate something about your business before anyone walks through the door. We provide pressure washing and exterior cleaning for offices, warehouses, retail and business premises, complexes, parking areas, walkways and entrances. Our focus is on restoring heavily used exterior surfaces while helping your property maintain a clean, professional appearance.</p>
-            <p style="margin-top: var(--space-3);">
-              <a href="/pressure-washing-johannesburg/"
-                  style="font-weight: 700; color: var(--amber); text-decoration: none;">
-                Explore our Johannesburg pressure washing services →
-              </a>
-            </p>
+            <p style="margin-top: var(--space-3);"><a href="/pressure-washing-johannesburg/" style="font-weight: 700; color: var(--amber); text-decoration: none;">Explore our Johannesburg pressure washing services →</a></p>
           </div>
 
           <div class="service-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
@@ -880,6 +966,28 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Your custom JS -->
   <script src="main.js"></script>
+
+  <!-- Service Areas dropdown: close on outside click or Escape -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const serviceAreasDropdown = document.querySelector('.nav-dropdown');
+      if (!serviceAreasDropdown) return;
+
+      document.addEventListener('click', function (event) {
+        if (serviceAreasDropdown.open && !serviceAreasDropdown.contains(event.target)) {
+          serviceAreasDropdown.removeAttribute('open');
+        }
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && serviceAreasDropdown.open) {
+          serviceAreasDropdown.removeAttribute('open');
+          const summary = serviceAreasDropdown.querySelector('summary');
+          if (summary) summary.focus();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
