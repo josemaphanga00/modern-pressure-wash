@@ -116,6 +116,15 @@
   ]
 }
   </script>
+<style>
+  /* Site-wide footer: Brand | Services | Service Areas | Contact */
+  @media (min-width: 901px) {
+    .site-footer .footer-grid { grid-template-columns: 1.25fr 1.15fr .9fr 1fr; gap: 38px; }
+  }
+  @media (max-width: 520px) {
+    .site-footer .legal-bar { gap: 10px; flex-wrap: wrap; }
+  }
+</style>
 </head>
 <body>
 
@@ -142,6 +151,7 @@
         </button>
 
         <a href="#services">Services</a>
+        <a href="/pressure-washing-pretoria/">Pretoria</a>
         <a href="/pressure-washing-johannesburg/">Johannesburg</a>
         <a href="#care-plans">Care Plans</a>
         <a href="#gallery">Gallery</a>
@@ -799,19 +809,23 @@
         <p style="font-size: 0.9rem; font-weight: 600; color: var(--white);">Restoring Beautiful Properties Across Gauteng</p>
         <p style="font-size: 0.85rem;">Professional Property Restoration • Residential • Commercial • Estates</p>
         <div style="display: flex; gap: var(--space-3); margin-top: var(--space-3);">
-          <a href="https://www.facebook.com/modernpressurewashing/" target="_blank" aria-label="Facebook" style="color: #8FA0A4; font-size: 1.5rem; transition: color 0.3s;"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/modernpressurewash/" target="_blank" aria-label="Instagram" style="color: #8FA0A4; font-size: 1.5rem; transition: color 0.3s;"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/modernpressurewashing/" target="_blank" rel="noopener" aria-label="Facebook" style="color: #8FA0A4; font-size: 1.5rem; transition: color 0.3s;"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/modernpressurewash/" target="_blank" rel="noopener" aria-label="Instagram" style="color: #8FA0A4; font-size: 1.5rem; transition: color 0.3s;"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
       <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
         <h4>Services</h4>
         <a href="#services">Driveway Restoration</a>
         <a href="#services">Roof Restoration</a>
-        <a href="#services">Paving, Patio & Entertainment Area Restoration</a>
+        <a href="#services">Paving, Patio &amp; Entertainment Area Restoration</a>
         <a href="#services">Wall Restoration</a>
         <a href="#services">Commercial Property Restoration</a>
-        <a href="/pressure-washing-johannesburg/">Johannesburg Pressure Washing</a>
         <a href="#services">Soft Washing</a>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+        <h4>Service Areas</h4>
+        <a href="/pressure-washing-pretoria/">Pretoria Pressure Washing</a>
+        <a href="/pressure-washing-johannesburg/">Johannesburg Pressure Washing</a>
       </div>
       <div class="footer-col" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
         <h4>Contact</h4>
